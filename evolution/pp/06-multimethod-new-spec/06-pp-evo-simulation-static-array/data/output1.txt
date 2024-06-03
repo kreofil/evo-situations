@@ -1,0 +1,525 @@
+Filled container. 
+Container is containing 13 elements.
+0: Rectangle is as Specialization of Figure: x = 3, y = 4
+1: Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+2: Rectangle is as Specialization of Figure: x = 30, y = 40
+3: Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+4: Rectangle is as Specialization of Figure: x = 13, y = 14
+5: Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+6: Rectangle is as Specialization of Figure: x = 330, y = 49
+7: Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+8: Circle is as Specialization of Figure: r = 10
+9: Circle is as Specialization of Figure: r = 15
+10: Circle is as Specialization of Figure: r = 6
+11: Rectangle is as Specialization of Figure: x = 5, y = 10
+12: Circle is as Specialization of Figure: r = 8
+Test of multimethods. 
+[0][0]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[0][1]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[0][2]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[0][3]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[0][4]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[0][5]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[0][6]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[0][7]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[0][8]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Circle is as Specialization of Figure: r = 10
+[0][9]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Circle is as Specialization of Figure: r = 15
+[0][10]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Circle is as Specialization of Figure: r = 6
+[0][11]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[0][12]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+     Circle is as Specialization of Figure: r = 8
+[1][0]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[1][1]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[1][2]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[1][3]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[1][4]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[1][5]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[1][6]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[1][7]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[1][8]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Circle is as Specialization of Figure: r = 10
+[1][9]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Circle is as Specialization of Figure: r = 15
+[1][10]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Circle is as Specialization of Figure: r = 6
+[1][11]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[1][12]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+     Circle is as Specialization of Figure: r = 8
+[2][0]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[2][1]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[2][2]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[2][3]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[2][4]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[2][5]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[2][6]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[2][7]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[2][8]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Circle is as Specialization of Figure: r = 10
+[2][9]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Circle is as Specialization of Figure: r = 15
+[2][10]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Circle is as Specialization of Figure: r = 6
+[2][11]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[2][12]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+     Circle is as Specialization of Figure: r = 8
+[3][0]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[3][1]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[3][2]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[3][3]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[3][4]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[3][5]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[3][6]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[3][7]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[3][8]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Circle is as Specialization of Figure: r = 10
+[3][9]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Circle is as Specialization of Figure: r = 15
+[3][10]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Circle is as Specialization of Figure: r = 6
+[3][11]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[3][12]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+     Circle is as Specialization of Figure: r = 8
+[4][0]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[4][1]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[4][2]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[4][3]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[4][4]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[4][5]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[4][6]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[4][7]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[4][8]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Circle is as Specialization of Figure: r = 10
+[4][9]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Circle is as Specialization of Figure: r = 15
+[4][10]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Circle is as Specialization of Figure: r = 6
+[4][11]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[4][12]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+     Circle is as Specialization of Figure: r = 8
+[5][0]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[5][1]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[5][2]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[5][3]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[5][4]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[5][5]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[5][6]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[5][7]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[5][8]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Circle is as Specialization of Figure: r = 10
+[5][9]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Circle is as Specialization of Figure: r = 15
+[5][10]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Circle is as Specialization of Figure: r = 6
+[5][11]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[5][12]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+     Circle is as Specialization of Figure: r = 8
+[6][0]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[6][1]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[6][2]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[6][3]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[6][4]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[6][5]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[6][6]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[6][7]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[6][8]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Circle is as Specialization of Figure: r = 10
+[6][9]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Circle is as Specialization of Figure: r = 15
+[6][10]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Circle is as Specialization of Figure: r = 6
+[6][11]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[6][12]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+     Circle is as Specialization of Figure: r = 8
+[7][0]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[7][1]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[7][2]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[7][3]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[7][4]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[7][5]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[7][6]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[7][7]: This is two Triangles
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[7][8]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Circle is as Specialization of Figure: r = 10
+[7][9]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Circle is as Specialization of Figure: r = 15
+[7][10]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Circle is as Specialization of Figure: r = 6
+[7][11]: We have Triangle and Rectangle
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[7][12]: Triangle & Circle Company
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+     Circle is as Specialization of Figure: r = 8
+[8][0]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 10
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[8][1]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 10
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[8][2]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 10
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[8][3]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 10
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[8][4]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 10
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[8][5]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 10
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[8][6]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 10
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[8][7]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 10
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[8][8]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 10
+     Circle is as Specialization of Figure: r = 10
+[8][9]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 10
+     Circle is as Specialization of Figure: r = 15
+[8][10]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 10
+     Circle is as Specialization of Figure: r = 6
+[8][11]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 10
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[8][12]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 10
+     Circle is as Specialization of Figure: r = 8
+[9][0]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 15
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[9][1]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 15
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[9][2]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 15
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[9][3]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 15
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[9][4]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 15
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[9][5]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 15
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[9][6]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 15
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[9][7]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 15
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[9][8]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 15
+     Circle is as Specialization of Figure: r = 10
+[9][9]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 15
+     Circle is as Specialization of Figure: r = 15
+[9][10]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 15
+     Circle is as Specialization of Figure: r = 6
+[9][11]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 15
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[9][12]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 15
+     Circle is as Specialization of Figure: r = 8
+[10][0]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 6
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[10][1]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 6
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[10][2]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 6
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[10][3]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 6
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[10][4]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 6
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[10][5]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 6
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[10][6]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 6
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[10][7]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 6
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[10][8]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 6
+     Circle is as Specialization of Figure: r = 10
+[10][9]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 6
+     Circle is as Specialization of Figure: r = 15
+[10][10]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 6
+     Circle is as Specialization of Figure: r = 6
+[10][11]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 6
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[10][12]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 6
+     Circle is as Specialization of Figure: r = 8
+[11][0]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[11][1]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[11][2]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[11][3]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[11][4]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[11][5]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[11][6]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[11][7]: The first figure is Rectangle and second is Triangle
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[11][8]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Circle is as Specialization of Figure: r = 10
+[11][9]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Circle is as Specialization of Figure: r = 15
+[11][10]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Circle is as Specialization of Figure: r = 6
+[11][11]: Rectangle + Rectangle = Two Rectangles
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[11][12]: We have Rectangle & Circle after its
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+     Circle is as Specialization of Figure: r = 8
+[12][0]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 8
+     Rectangle is as Specialization of Figure: x = 3, y = 4
+[12][1]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 8
+     Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+[12][2]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 8
+     Rectangle is as Specialization of Figure: x = 30, y = 40
+[12][3]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 8
+     Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+[12][4]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 8
+     Rectangle is as Specialization of Figure: x = 13, y = 14
+[12][5]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 8
+     Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+[12][6]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 8
+     Rectangle is as Specialization of Figure: x = 330, y = 49
+[12][7]: This Circle is before Triangle
+     Circle is as Specialization of Figure: r = 8
+     Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+[12][8]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 8
+     Circle is as Specialization of Figure: r = 10
+[12][9]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 8
+     Circle is as Specialization of Figure: r = 15
+[12][10]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 8
+     Circle is as Specialization of Figure: r = 6
+[12][11]: Circle + Rectanle = 4 Angles
+     Circle is as Specialization of Figure: r = 8
+     Rectangle is as Specialization of Figure: x = 5, y = 10
+[12][12]: 2 * Circle = 8
+     Circle is as Specialization of Figure: r = 8
+     Circle is as Specialization of Figure: r = 8
+Empty container. 
+Container is containing 0 elements.
