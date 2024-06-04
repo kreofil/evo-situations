@@ -1,0 +1,28 @@
+Filled container. 
+Container is containing 8 elements.
+0: Colored Figure:
+    Rectangle is as Specialization of Figure: x = 3, y = 4
+    Color is green
+1: Colored Figure:
+    Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+    Color is red
+2: Colored Figure:
+    Rectangle is as Specialization of Figure: x = 30, y = 40
+    Color is blue
+3: Colored Figure:
+    Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+    Color is white
+4: Colored Figure:
+    Rectangle is as Specialization of Figure: x = 13, y = 14
+    Color is yellow
+5: Colored Figure:
+    Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+    Color is red
+6: Rectangle is as Specialization of Figure: x = 7, y = 7
+7: Colored Figure:
+    Colored Figure:
+    Rectangle is as Specialization of Figure: x = 330, y = 49
+    Color is cyan
+    Color is green
+Empty container. 
+Container is containing 0 elements.
