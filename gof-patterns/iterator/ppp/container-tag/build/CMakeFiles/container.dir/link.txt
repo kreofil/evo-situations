@@ -1,1 +1,0 @@
-ppclang -g CMakeFiles/container.dir/main.c.o CMakeFiles/container.dir/value.c.o CMakeFiles/container.dir/array.c.o "CMakeFiles/container.dir/ring-list.c.o" CMakeFiles/container.dir/container.c.o "CMakeFiles/container.dir/container-array.c.o" "CMakeFiles/container.dir/container-ring-list.c.o" -o /home/al/Projects/git-books/ppp/programs/ppp-libraries/container-tag/bin/container

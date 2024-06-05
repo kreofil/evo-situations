@@ -22,11 +22,11 @@ Figure* FigureCreateAndIn(FILE* ifst) {
   switch(k) {
   case 1:
     // sp = create_spec(Figure<Rectangle>); // Создание и инициализация
-    sp = create_spec<struct Figure<struct Rectangle> >(); // Создание и инициализация
+    sp = create_spec(struct Figure<struct Rectangle>); // Создание и инициализация
     break;
   case 2:
     // sp = create_spec(Figure<Triangle>); // Создание и инициализация
-    sp = create_spec<struct Figure<struct Triangle> >(); // Создание и инициализация
+    sp = create_spec(struct Figure<struct Triangle>); // Создание и инициализация
     break;
   default:
     return 0;

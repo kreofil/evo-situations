@@ -33,7 +33,8 @@ void ResultOut<Builder *f>(FILE* ofst) {} //= 0;
 //------------------------------------------------------------------------------
 // Строитель для формирования простых прямоугольников
 void BuildRectangle<Builder<SimpleBuilder> *f>(double x, double y) {
-  struct Figure<SimpleRectangle> *rectangle = create_spec<Figure<SimpleRectangle> >();
+  struct Figure<SimpleRectangle> *rectangle =
+                                  create_spec(Figure<SimpleRectangle>);
   rectangle->@.x = x;
   rectangle->@.y = y;
   FigureContainerAppend(f->@container, rectangle);
@@ -43,7 +44,8 @@ void BuildRectangle<Builder<SimpleBuilder> *f>(double x, double y) {
 //------------------------------------------------------------------------------
 // Строитель для формирования простых треугольников
 void BuildTriangle<Builder<SimpleBuilder> *f>(double a, double b, double c) {
-  struct Figure<SimpleTriangle> *triangle = create_spec<Figure<SimpleTriangle> >();
+  struct Figure<SimpleTriangle> *triangle =
+                                  create_spec(Figure<SimpleTriangle>);
   triangle->@.a = a;
   triangle->@.b = b;
   triangle->@.c = c;

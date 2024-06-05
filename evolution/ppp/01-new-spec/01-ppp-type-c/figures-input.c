@@ -22,13 +22,13 @@ Figure* FigureCreateAndIn(FILE* ifst) {
   fscanf(ifst, "%d", &(k));
   switch(k) {
   case 1:
-    sp = create_spec<struct Figure<struct Rectangle> >();
+    sp = create_spec(struct Figure<struct Rectangle>);
     break;
   case 2:
-    sp = create_spec<struct Figure<struct Triangle> >();
+    sp = create_spec(struct Figure<struct Triangle>);
     break;
   case 3:
-    sp = create_spec<struct Figure<struct Circle> >();
+    sp = create_spec(struct Figure<struct Circle>);
     break;
   default:
     return 0;

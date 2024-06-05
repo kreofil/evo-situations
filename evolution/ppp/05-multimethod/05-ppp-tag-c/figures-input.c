@@ -19,10 +19,10 @@ Figure* FigureCreateAndIn(FILE* ifst) {
   fscanf(ifst, "%d", &(k));
   switch(k) {
   case 1:
-    sp = create_spec<Figure<rect> >();
+    sp = create_spec(Figure<rect>);
     break;
   case 2:
-    sp = create_spec<Figure<trian> >();
+    sp = create_spec(Figure<trian>);
     break;
   default:
     return 0;

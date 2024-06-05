@@ -22,17 +22,17 @@ Figure* FigureCreateAndIn(FILE* ifst) {
   case 1:
     // Создание и инициализация прямоугольника
     // sp = create_spec(Figure<rect>);
-    sp = create_spec<Figure<rect> >(); // Создание и инициализация
+    sp = create_spec(Figure<rect>); // Создание и инициализация
     break;
   case 2:
     // Создание и инициализация треугольника
     // sp = create_spec(Figure<trian>);
-    sp = create_spec<Figure<trian> >(); // Создание и инициализация
+    sp = create_spec(Figure<trian>); // Создание и инициализация
     break;
   case 3:
     // Создание и инициализация круга
     // sp = create_spec(Figure<circ>);
-    sp = create_spec<Figure<circ> >(); // Создание и инициализация
+    sp = create_spec(Figure<circ>); // Создание и инициализация
     break;
   default:
     return 0;

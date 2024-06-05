@@ -21,16 +21,16 @@ Figure* FigureCreateAndIn(FILE* ifst)
     fscanf(ifst, "%d", &(k));
     switch (k) {
     case 1:
-        sp = create_spec<Figure<rect> >();
+        sp = create_spec(Figure<rect>);
         break;
     case 2:
-        sp = create_spec<Figure<trian> >();
+        sp = create_spec(Figure<trian>);
         break;
     default:
-        return 0;
+        return NULL;
     }
     // Создание декоратора
-    struct Figure<decor>* sd = create_spec<Figure<decor> >();
+    struct Figure<decor>* sd = create_spec(Figure<decor>);
     sd->@f = sp; // связывание с фигурой
     FigureIn<sd>(ifst); // ввод декорированной фигуры
     return sd;

@@ -12,11 +12,11 @@ Figure* CreateFigure<Creator *f>() {} //= 0;
 //------------------------------------------------------------------------------
 // Создатель прямоугольников-специализаций
 Figure* CreateFigure<Creator<rect>  *f>() {
-  return create_spec<struct Figure<struct SimpleRectangle> >();
+  return create_spec(struct Figure<struct SimpleRectangle>);
 }
 
 //------------------------------------------------------------------------------
 // Создатель треугольников-специализаций
 Figure* CreateFigure<Creator<trian> *f>() {
-  return create_spec<struct Figure<struct SimpleTriangle> >();
+  return create_spec(struct Figure<struct SimpleTriangle>);
 }

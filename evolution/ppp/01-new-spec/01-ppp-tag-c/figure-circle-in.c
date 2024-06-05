@@ -9,7 +9,7 @@
 
 //------------------------------------------------------------------------------
 // Прототип функции ввода круга
-void FigureIn(Circle *c, FILE* ifst);
+void CircleIn(Circle *c, FILE* ifst);
 // Прототип обобщеннай функции вывода фигуры
 void FigureIn<Figure *f>(FILE* ifst);
 

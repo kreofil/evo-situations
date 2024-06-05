@@ -41,7 +41,7 @@ int main(void) {
 
   // Динамическое создание нового элемента
   struct Value<i>* pvInt;
-  pvInt = create_spec<struct Value<i> >();
+  pvInt = create_spec(struct Value<i>);
   pvInt->@x = 20;
   struct Value* pv = pvInt;
   // OutValue<pv>(stdout);
@@ -52,7 +52,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<i> >();
+  pvInt = create_spec(struct Value<i>);
   pvInt->@x = 30;
   // OutValue<pvInt>(stdout);
 
@@ -62,7 +62,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<i> >();
+  pvInt = create_spec(struct Value<i>);
   pvInt->@x = 40;
   // OutValue<pvInt>(stdout);
 
@@ -72,7 +72,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<i> >();
+  pvInt = create_spec(struct Value<i>);
   pvInt->@x = v1.@x;
   // OutValue<pvInt>(stdout);
 
@@ -126,7 +126,7 @@ int main(void) {
 
   // Динамическое создание нового элемента
   // struct Value<Int>* pvInt;
-  pvInt = create_spec<struct Value<i> >();
+  pvInt = create_spec(struct Value<i>);
   pvInt->@x = 220;
   pv = pvInt;
   // OutValue<pv>(stdout);
@@ -137,7 +137,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<i> >();
+  pvInt = create_spec(struct Value<i>);
   pvInt->@x = 330;
   // OutValue<pvInt>(stdout);
 
@@ -147,7 +147,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<i> >();
+  pvInt = create_spec(struct Value<i>);
   pvInt->@x = 440;
   // OutValue<pvInt>(stdout);
 
@@ -157,7 +157,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<i> >();
+  pvInt = create_spec(struct Value<i>);
   pvInt->@x = v1.@x;
   // OutValue<pvInt>(stdout);
 

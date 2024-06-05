@@ -25,13 +25,13 @@ Figure* FigureCreateAndIn(FILE* ifst, struct FigureFactory* factory) {
   fscanf(ifst, "%d", &(k));
   switch(k) {
   case 1:
-    pr = create_spec<struct Figure<rect> >();     // Создается оболочка
+    pr = create_spec(struct Figure<rect>);     // Создается оболочка
     r = CreateRectangle<factory>(); // Запуск фабрики прямоугольников
     RectangleIn<r>(ifst);
     pr->@ = r;
     break;
   case 2:
-    pt = create_spec<struct Figure<trian> >();    // Создается оболочка
+    pt = create_spec(struct Figure<trian>);    // Создается оболочка
     t = CreateTriangle<factory>();  // Запуск фабрики треугольников
     TriangleIn<t>(ifst);
     pt->@ = t;

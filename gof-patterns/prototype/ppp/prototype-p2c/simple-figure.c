@@ -43,10 +43,10 @@ SimpleFigure* FigureCreateAndIn(FILE* ifst) {
   fscanf(ifst, "%d", &(k));
   switch(k) {
   case 1:
-    sp = create_spec<SimpleFigure<SimpleRectangle> >();
+    sp = create_spec(SimpleFigure<SimpleRectangle>);
     break;
   case 2:
-    sp = create_spec<SimpleFigure<SimpleTriangle> >();
+    sp = create_spec(SimpleFigure<SimpleTriangle>);
     break;
   default:
     return 0;
@@ -84,7 +84,7 @@ SimpleFigure* FigureClone<SimpleFigure *f>() {return NULL;} //= 0
 // Обработчик, клонирующий прямоугольник
 SimpleFigure* FigureClone<SimpleFigure<SimpleRectangle> *f>() {
   struct SimpleFigure<SimpleRectangle> *r
-        = create_spec<SimpleFigure<SimpleRectangle> >();
+        = create_spec(SimpleFigure<SimpleRectangle>);
   // memcpy(r, f, sizeof(SimpleFigure<SimpleRectangle>));
   r->@x = f->@x;
   r->@y = f->@y;
@@ -95,7 +95,7 @@ SimpleFigure* FigureClone<SimpleFigure<SimpleRectangle> *f>() {
 // Обработчик, клонирующий треугольник
 SimpleFigure* FigureClone<SimpleFigure<SimpleTriangle> *f>() {
   struct SimpleFigure<SimpleTriangle> *t
-        = create_spec<SimpleFigure<SimpleTriangle> >();
+        = create_spec(SimpleFigure<SimpleTriangle>);
   // memcpy(t, f, sizeof(SimpleFigure<SimpleTriangle>));
   t->@a = f->@a;
   t->@b = f->@b;
@@ -108,7 +108,7 @@ SimpleFigure* FigureClone<SimpleFigure<SimpleTriangle> *f>() {
 // Обработчик, клонирующий контейнер
 SimpleFigure* FigureClone<SimpleFigure<FigureContainer> *f>() {
   struct SimpleFigure<FigureContainer>* clone =
-      create_spec<SimpleFigure<FigureContainer> >();
+      create_spec(SimpleFigure<FigureContainer>);
   FigureContainer *own_container = &(f->@);
   FigureContainer *clone_container = &(clone->@);
   clone_container->len = own_container->len;
