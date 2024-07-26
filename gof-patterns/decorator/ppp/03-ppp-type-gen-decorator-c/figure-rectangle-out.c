@@ -16,6 +16,6 @@ void FigureOut<Figure *f>(FILE* ofst);
 //------------------------------------------------------------------------------
 // Ввод прямоугольника как фигуры
 // void FigureOut<Figure<Rectangle> *f>(FILE* ofst) {
-void FigureOut<struct Figure<struct Rectangle> *f>(FILE* ofst) {
+void FigureOut<Figure.Rectangle *f>(FILE* ofst) {
   RectangleOut(&(f->@), ofst);
 }

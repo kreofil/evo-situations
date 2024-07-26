@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
 
   printf("Start\n");
 
-  struct SimpleFigure<FigureContainer> container;
+  struct SimpleFigure.FigureContainer container;
   FigureContainerInit(&(container.@));
 
   FigureIn<&container>(ifst);
@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
 
   //========
 
-  struct SimpleFigure<FigureContainer> *pc;
+  struct SimpleFigure.FigureContainer *pc;
   pc = FigureClone<&container>();
 
   fprintf(stdout, "Filled Cloned container.\n");

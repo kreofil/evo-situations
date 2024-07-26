@@ -15,6 +15,6 @@ void FigureIn<Figure *f>(FILE* file);
 
 //------------------------------------------------------------------------------
 // Ввод треугольника как фигуры
-void FigureIn<Figure<trian> *f>(FILE* ifst) {
+void FigureIn<Figure.trian *f>(FILE* ifst) {
   TriangleIn(&(f->@), ifst);
 }

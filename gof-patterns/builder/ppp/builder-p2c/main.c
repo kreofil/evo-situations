@@ -18,10 +18,10 @@ int main() {
   FigureContainer container;
   FigureContainerInit(&container);
 
-  struct Builder<struct SimpleBuilder> simpleBuilder;
+  struct Builder.SimpleBuilder simpleBuilder;
   simpleBuilder.@container = &container;
 
-  struct Builder<struct CounterBuilder> counterBuilder;
+  struct Builder.CounterBuilder counterBuilder;
   counterBuilder.@rectanglesCounter = 0;
   counterBuilder.@trianglesCounter = 0;
 

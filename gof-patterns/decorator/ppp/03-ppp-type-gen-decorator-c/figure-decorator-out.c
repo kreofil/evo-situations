@@ -12,7 +12,7 @@ void FigureOut<Figure * f>(FILE* ofst);
 
 void DecoratorOut<Decorator * d>(FILE* ofst) {}
 
-void DecoratorOut<Decorator<Figure> * d>(FILE* ofst) {
+void DecoratorOut<Decorator.Figure * d>(FILE* ofst) {
     // В начале выводится содержимое фигуры
     FigureOut<&(d->@)>(ofst);
     // Затем содержимое декоратора
@@ -20,14 +20,14 @@ void DecoratorOut<Decorator<Figure> * d>(FILE* ofst) {
 }
 //------------------------------------------------------------------------------
 // Ввод фигуры совместно с содержимым декоратора
-void FigureOut<Figure<Decorator> * d>(FILE* ofst)
+void FigureOut<Figure.Decorator * d>(FILE* ofst)
 {
     DecoratorOut<&(d->@)>(ofst);
 }
 
 //------------------------------------------------------------------------------
 // Ввод фигуры совместно с содержимым декоратора
-// void FigureOut<Figure<Decorator> * d>(FILE* ofst) {
+// void FigureOut<Figure.Decorator * d>(FILE* ofst) {
 // void FigureOut<struct Figure<struct Decorator> * d>(FILE* ofst) {
 //     // В начале выводится содержимое фигуры
 //     FigureOut<&(d->@f)>(ofst);

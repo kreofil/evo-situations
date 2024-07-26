@@ -14,26 +14,26 @@ Container + <Array;>;
 // выступающего в роли контейнера
 
 // Начальная инициализация контейнера
-void InitContainer<Container<Array> >* container>() {
+void InitContainer<Container.Array* container>() {
   Array* array = &(container->@);
   InitArray(array);
 }
 
 // Добавление значения в хвост контейнера
-void AppendContainer<Container<Array> >* container>(Value* value) {
+void AppendContainer<Container.Array* container>(Value* value) {
   Array* array = &(container->@);
   AppendArray(array, value);
 }
 
 // Вывод элементов контейнера в указанный файл, который
 // должен быть предварително открыт
-void OutContainerValues<Container<Array> >* container>(FILE* file)  {
+void OutContainerValues<Container.Array* container>(FILE* file)  {
   Array* array = &(container->@);
   OutArrayValues(file, array);
 }
 
 // Удаление всех элементов из контейнера (очистка от данных)
-void EmptyContainer<Container<Array> >* container>() {
+void EmptyContainer<Container.Array* container>() {
   Array* array = &(container->@);
   EmptyArray(array);
 }
@@ -43,7 +43,7 @@ void EmptyContainer<Container<Array> >* container>() {
 
 //------------------------------------------------------------------------------
 // Указатель на значение первого элемента контейнера
-void First<Container<Array> >* container>() {
+void First<Container.Array* container>() {
   Array* array = &(container->@);
   if(array->len == 0) {
     array->current = -1;
@@ -54,7 +54,7 @@ void First<Container<Array> >* container>() {
 
 //------------------------------------------------------------------------------
 // Перевод указателя на значение следующего элемента контейнера
-void Next<Container<Array> >* container>() {
+void Next<Container.Array* container>() {
   Array* array = &(container->@);
   if(array->len == 0) {
     array->current = -1;
@@ -63,7 +63,7 @@ void Next<Container<Array> >* container>() {
 
 //------------------------------------------------------------------------------
 // Проверка выхода за последний элемент контейнера
-_Bool IsDone<Container<Array> >* container>() {
+_Bool IsDone<Container.Array* container>() {
   Array* array = &(container->@);
   if(array->current >= array->len) {
     array->current = array->len;
@@ -74,7 +74,7 @@ _Bool IsDone<Container<Array> >* container>() {
 
 //------------------------------------------------------------------------------
 // Указатель на значение текущего элемента контейнера
-Value* CurrentItem<Container<Array> >* container>() {
+Value* CurrentItem<Container.Array* container>() {
   Array* array = &(container->@);
   if((array->current >= 0) && (array->current < array->len)) {
     return array->value[array->current];

@@ -14,6 +14,10 @@
 
 //------------------------------------------------------------------------------
 // Фигура
-typedef struct Figure {} <rect: *struct Rectangle; trian: *struct Triangle;> Figure;
+// typedef struct Figure {} <rect: Rectangle*; trian: Triangle*;> Figure;
+typedef struct Figure {} < : > Figure;
+// Figure + <rect: Rectangle*; trian: Triangle*;>;
+Figure + <rect: Rectangle*;>;
+Figure + <trian: Triangle*;>;
 
 #endif // __figure__

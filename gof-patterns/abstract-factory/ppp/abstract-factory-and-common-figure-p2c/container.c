@@ -4,7 +4,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "figure-factory.h"
 #include "container.h"
+
+//------------------------------------------------------------------------------
+// Сигнатуры требуемых функций можно тоже подключить через
+// заголовочный файл. Но, для простоты, можно и так описать.
+void FigureOut<struct Figure* s>(FILE* ofst);
 
 //------------------------------------------------------------------------------
 // Инициализация контейнера
@@ -18,13 +24,13 @@ void ContainerClear(Container *c) {
   for(int i = 0; i < c->len; i++) {
     free(c->cont[i]);
   }
-  InitContainer(c);
+  ContainerInit(c);
 }
 
 //------------------------------------------------------------------------------
 // Сигнатуры требуемых функций можно тоже подключить через
 // заголовочный файл. Но, для простоты, можно и так описать.
-struct Figure *FigureCreateAndIn(FILE* ifdt);
+struct Figure *FigureCreateAndIn(FILE* ifdt, struct FigureFactory* factory);
 
 //------------------------------------------------------------------------------
 // Ввод содержимого контейнера из указанного потока
@@ -37,15 +43,11 @@ void ContainerIn(Container* c, FILE* ifst, FigureFactory* factory) {
 }
 
 //------------------------------------------------------------------------------
-// Сигнатуры требуемых функций можно тоже подключить через
-// заголовочный файл. Но, для простоты, можно и так описать.
-void FigureOut<struct Figure* s>(FILE* ofst);
-
-//------------------------------------------------------------------------------
 // Вывод содержимого контейнера в указанный поток
 void ContainerOut(Container *c, FILE* ofst) {
-  fprintf(ofst, "Container contains %d elements.\n", c->len);
+  // fprintf(ofst, "Container contains %d elements.\n", c->len);
   for(int i = 0; i < c->len; i++) {
+    // printf("%d: Loop in container\n", i);
     fprintf(ofst, "%d: " , i);
     FigureOut<c->cont[i]>(ofst);
   }

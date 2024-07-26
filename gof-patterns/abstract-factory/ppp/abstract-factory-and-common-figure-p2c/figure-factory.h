@@ -20,16 +20,16 @@ typedef struct FigureFactory {} <simple, coord: void> FigureFactory;
 // Обобщенная функция создания прямоугольника
 Rectangle* CreateRectangle<FigureFactory *factory>();
 // Обработчик специализации, создающий простой прямоугольник
-Rectangle* CreateRectangle<FigureFactory<simple> *factory>();
+Rectangle* CreateRectangle<FigureFactory.simple *factory>();
 // Обработчик специализации, создающий прямоугольник, заданный координатами
-Rectangle* CreateRectangle<FigureFactory<coord> *factory>();
+Rectangle* CreateRectangle<FigureFactory.coord *factory>();
 
 //------------------------------------------------------------------------------
 // Обобщенная функция создания треугольника
 Triangle* CreateTriangle<FigureFactory *factory>();
 // Обработчик специализации, создающий простой треугольник
-Triangle* CreateTriangle<FigureFactory<simple> *factory>();
+Triangle* CreateTriangle<FigureFactory.simple *factory>();
 // Обработчик специализации, создающий треугольник, заданный координатами
-Triangle* CreateTriangle<FigureFactory<coord> *factory>();
+Triangle* CreateTriangle<FigureFactory.coord *factory>();
 
 #endif // __figure_factory__

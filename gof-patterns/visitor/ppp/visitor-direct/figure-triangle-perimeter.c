@@ -14,6 +14,6 @@ double FigurePerimeter<Figure *f>();
 
 //------------------------------------------------------------------------------
 // Периметр прямоугольника как фигуры
-void FigurePerimeter<struct Figure<struct Triangle> *f>() {
+void FigurePerimeter<Figure.Triangle *f>() {
   TrianglePerimeter(&(f->@));
 }

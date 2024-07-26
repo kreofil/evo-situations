@@ -14,14 +14,14 @@ Rectangle* CreateRectangle<FigureFactory *factory>() {return NULL;} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, создающий простой прямоугольник
-Rectangle* CreateRectangle<FigureFactory<simple> *factory>() {
-  return create_spec(struct Rectangle<struct SimpleRectangle>);
+Rectangle* CreateRectangle<FigureFactory.simple *factory>() {
+  return create_spec(Rectangle.SimpleRectangle);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, создающий прямоугольник, заданный координатами
-Rectangle* CreateRectangle<FigureFactory<coord> *factory>() {
-  return create_spec(struct Rectangle<struct CoordRectangle>);
+Rectangle* CreateRectangle<FigureFactory.coord *factory>() {
+  return create_spec(Rectangle.CoordRectangle);
 }
 
 //------------------------------------------------------------------------------
@@ -30,12 +30,12 @@ Triangle* CreateTriangle<FigureFactory *factory>() {return NULL;} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, создающий простой треугольник
-Triangle* CreateTriangle<FigureFactory<simple> *factory>() {
-  return create_spec(struct Triangle<struct SimpleTriangle>);
+Triangle* CreateTriangle<FigureFactory.simple *factory>() {
+  return create_spec(Triangle.SimpleTriangle);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, создающий треугольник, заданный координатами
-Triangle* CreateTriangle<FigureFactory<coord> *factory>() {
-  return create_spec(struct Triangle<struct CoordTriangle>);
+Triangle* CreateTriangle<FigureFactory.coord *factory>() {
+  return create_spec(Triangle.CoordTriangle);
 }

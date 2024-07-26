@@ -14,19 +14,19 @@ void FigureIn<SimpleFigure *f>(FILE* ifst) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий ввод фигуры из семейства прямоугольников
-void FigureIn<SimpleFigure<SimpleRectangle> *f>(FILE* ifst) {
+void FigureIn<SimpleFigure.SimpleRectangle *f>(FILE* ifst) {
   SimpleRectangleIn(&(f->@), ifst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий ввод фигуры из семейства треугольников
-void FigureIn<SimpleFigure<SimpleTriangle> *f>(FILE* ifst) {
+void FigureIn<SimpleFigure.SimpleTriangle *f>(FILE* ifst) {
   SimpleTriangleIn(&(f->@), ifst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий ввод фигуры из семейства контейнеров
-void FigureIn<SimpleFigure<FigureContainer> *f>(FILE* ifst) {
+void FigureIn<SimpleFigure.FigureContainer *f>(FILE* ifst) {
   struct FigureContainer* c = &(f->@);
   while(!feof(ifst))  {
     if((c->cont[c->len] = FigureCreateAndIn(ifst)) != 0) {
@@ -43,10 +43,10 @@ SimpleFigure* FigureCreateAndIn(FILE* ifst) {
   fscanf(ifst, "%d", &(k));
   switch(k) {
   case 1:
-    sp = create_spec(SimpleFigure<SimpleRectangle>);
+    sp = create_spec(SimpleFigure.SimpleRectangle);
     break;
   case 2:
-    sp = create_spec(SimpleFigure<SimpleTriangle>);
+    sp = create_spec(SimpleFigure.SimpleTriangle);
     break;
   default:
     return 0;
@@ -63,17 +63,17 @@ void FigureOut<SimpleFigure *f>(FILE* ofst) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий вывод фигуры из семейства прямоугольников
-void FigureOut<SimpleFigure<SimpleRectangle> *f>(FILE* ofst) {
+void FigureOut<SimpleFigure.SimpleRectangle *f>(FILE* ofst) {
   SimpleRectangleOut(&(f->@), ofst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий вывод фигуры из семейства треугольников
-void FigureOut<SimpleFigure<SimpleTriangle> *f>(FILE* ofst) {
+void FigureOut<SimpleFigure.SimpleTriangle *f>(FILE* ofst) {
   SimpleTriangleOut(&(f->@), ofst);
 }
 
-void FigureOut<SimpleFigure<FigureContainer> *f>(FILE* ofst) {
+void FigureOut<SimpleFigure.FigureContainer *f>(FILE* ofst) {
   FigureContainerOut(&(f->@), ofst);
 }
 //------------------------------------------------------------------------------
@@ -82,9 +82,9 @@ SimpleFigure* FigureClone<SimpleFigure *f>() {return NULL;} //= 0
 
 //------------------------------------------------------------------------------
 // Обработчик, клонирующий прямоугольник
-SimpleFigure* FigureClone<SimpleFigure<SimpleRectangle> *f>() {
-  struct SimpleFigure<SimpleRectangle> *r
-        = create_spec(SimpleFigure<SimpleRectangle>);
+SimpleFigure* FigureClone<SimpleFigure.SimpleRectangle *f>() {
+  struct SimpleFigure.SimpleRectangle *r
+        = create_spec(SimpleFigure.SimpleRectangle);
   // memcpy(r, f, sizeof(SimpleFigure<SimpleRectangle>));
   r->@x = f->@x;
   r->@y = f->@y;
@@ -93,9 +93,9 @@ SimpleFigure* FigureClone<SimpleFigure<SimpleRectangle> *f>() {
 
 //------------------------------------------------------------------------------
 // Обработчик, клонирующий треугольник
-SimpleFigure* FigureClone<SimpleFigure<SimpleTriangle> *f>() {
-  struct SimpleFigure<SimpleTriangle> *t
-        = create_spec(SimpleFigure<SimpleTriangle>);
+SimpleFigure* FigureClone<SimpleFigure.SimpleTriangle *f>() {
+  struct SimpleFigure.SimpleTriangle *t
+        = create_spec(SimpleFigure.SimpleTriangle);
   // memcpy(t, f, sizeof(SimpleFigure<SimpleTriangle>));
   t->@a = f->@a;
   t->@b = f->@b;
@@ -106,9 +106,9 @@ SimpleFigure* FigureClone<SimpleFigure<SimpleTriangle> *f>() {
 
 //------------------------------------------------------------------------------
 // Обработчик, клонирующий контейнер
-SimpleFigure* FigureClone<SimpleFigure<FigureContainer> *f>() {
-  struct SimpleFigure<FigureContainer>* clone =
-      create_spec(SimpleFigure<FigureContainer>);
+SimpleFigure* FigureClone<SimpleFigure.FigureContainer *f>() {
+  struct SimpleFigure.FigureContainer* clone =
+      create_spec(SimpleFigure.FigureContainer);
   FigureContainer *own_container = &(f->@);
   FigureContainer *clone_container = &(clone->@);
   clone_container->len = own_container->len;

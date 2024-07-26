@@ -18,13 +18,13 @@ void FigureIn<Figure *f>(FILE* file) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Ввод прямоугольника как фигуры
-void FigureIn<Figure<SimpleRectangle> *f>(FILE* ifst) {
+void FigureIn<Figure.SimpleRectangle *f>(FILE* ifst) {
   SimpleRectangleIn(&(f->@), ifst);
 }
 
 //------------------------------------------------------------------------------
 // Ввод треугольника как фигуры
-void FigureIn<Figure<SimpleTriangle> *f>(FILE* ifst) {
+void FigureIn<Figure.SimpleTriangle *f>(FILE* ifst) {
   SimpleTriangleIn(&(f->@), ifst);
 }
 
@@ -34,12 +34,12 @@ void FigureOut<Figure *f>(FILE* ofst) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий вывод фигуры из семейства прямоугольников
-void FigureOut<Figure<SimpleRectangle> *f>(FILE* ofst) {
+void FigureOut<Figure.SimpleRectangle *f>(FILE* ofst) {
   SimpleRectangleOut(&(f->@), ofst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий вывод фигуры из семейства треугольников
-void FigureOut<Figure<SimpleTriangle> *f>(FILE* ofst) {
+void FigureOut<Figure.SimpleTriangle *f>(FILE* ofst) {
   SimpleTriangleOut(&(f->@), ofst);
 }

@@ -32,9 +32,9 @@ void ResultOut<Builder *f>(FILE* ofst) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Строитель для формирования простых прямоугольников
-void BuildRectangle<Builder<SimpleBuilder> *f>(double x, double y) {
-  struct Figure<SimpleRectangle> *rectangle =
-                                  create_spec(Figure<SimpleRectangle>);
+void BuildRectangle<Builder.SimpleBuilder *f>(double x, double y) {
+  struct Figure.SimpleRectangle *rectangle =
+                                  create_spec(Figure.SimpleRectangle);
   rectangle->@.x = x;
   rectangle->@.y = y;
   FigureContainerAppend(f->@container, rectangle);
@@ -43,9 +43,9 @@ void BuildRectangle<Builder<SimpleBuilder> *f>(double x, double y) {
 
 //------------------------------------------------------------------------------
 // Строитель для формирования простых треугольников
-void BuildTriangle<Builder<SimpleBuilder> *f>(double a, double b, double c) {
-  struct Figure<SimpleTriangle> *triangle =
-                                  create_spec(Figure<SimpleTriangle>);
+void BuildTriangle<Builder.SimpleBuilder *f>(double a, double b, double c) {
+  struct Figure.SimpleTriangle *triangle =
+                                  create_spec(Figure.SimpleTriangle);
   triangle->@.a = a;
   triangle->@.b = b;
   triangle->@.c = c;
@@ -54,7 +54,7 @@ void BuildTriangle<Builder<SimpleBuilder> *f>(double a, double b, double c) {
 
 //------------------------------------------------------------------------------
 // Формирование результата работы строителя простых фигур.
-void ResultOut<Builder<SimpleBuilder> *f>(FILE* ofst) {
+void ResultOut<Builder.SimpleBuilder *f>(FILE* ofst) {
   fprintf(ofst, "Result of building from Simple figures:\n");
   FigureContainerOut(f->@container, ofst);
 }
@@ -65,20 +65,20 @@ void ResultOut<Builder<SimpleBuilder> *f>(FILE* ofst) {
 
 //------------------------------------------------------------------------------
 // Строитель для формирования простых прямоугольников
-void BuildRectangle<Builder<CounterBuilder> *f>(double x, double y) {
+void BuildRectangle<Builder.CounterBuilder *f>(double x, double y) {
   ++(f->@rectanglesCounter);
 }
 
 
 //------------------------------------------------------------------------------
 // Строитель для формирования простых треугольников
-void BuildTriangle<Builder<CounterBuilder> *f>(double a, double b, double c) {
+void BuildTriangle<Builder.CounterBuilder *f>(double a, double b, double c) {
   ++(f->@trianglesCounter);
 }
 
 //------------------------------------------------------------------------------
 // Формирование результата работы строителя простых фигур.
-void ResultOut<Builder<CounterBuilder> *f>(FILE* ofst) {
+void ResultOut<Builder.CounterBuilder *f>(FILE* ofst) {
   fprintf(ofst, "Result of figures counting:\n");
   fprintf(ofst, "    number of rectangles: %d", f->@rectanglesCounter);
   fprintf(ofst, "    number of triangles: %d", f->@trianglesCounter);

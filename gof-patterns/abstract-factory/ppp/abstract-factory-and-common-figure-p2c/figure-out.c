@@ -16,16 +16,23 @@ void TriangleOut<Triangle *t>(FILE* ofst);
 
 //------------------------------------------------------------------------------
 // Обобщенная функция вывода люоой фигуры
-void FigureOut<Figure *f>(FILE* ofst) {} //= 0;
+void FigureOut<Figure *f>(FILE* ofst) {
+  printf("FigureOut: Incorrct link to generalized function\n");
+} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий вывод фигуры из семейства прямоугольников
-void FigureOut<Figure<rect> *f>(FILE* ofst) {
-  RectangleOut<f->@>(ofst);
+void FigureOut<Figure.rect *f>(FILE* ofst) {
+  // printf("Test Rectangle FigureOut started\n");
+  Rectangle* pr = f->@;
+  RectangleOut<pr>(ofst);
+  // RectangleOut<f->@>(ofst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий вывод фигуры из семейства треугольников
-void FigureOut<Figure<trian> *f>(FILE* ofst) {
-  TriangleOut<f->@>(ofst);
+void FigureOut<Figure.trian *f>(FILE* ofst) {
+  // printf("Test Triangle FigureOut started\n");
+  Triangle* pt = f->@;
+  TriangleOut<pt>(ofst);
 }

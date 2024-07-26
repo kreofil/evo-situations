@@ -28,8 +28,8 @@ int main() {
   FILE* ifst_coord = fopen(coordFigureFile, "r");
   FILE* ofst = fopen(resultFigureFile, "w");
 
-  struct FigureFactory<simple> simpleFactory;
-  struct FigureFactory<coord>  coordFactory;
+  struct FigureFactory.simple simpleFactory;
+  struct FigureFactory.coord  coordFactory;
 
   printf("Start\n");
 
@@ -45,13 +45,13 @@ int main() {
   fprintf(ofst, "Simple Figures Filled Container.\n");
   ContainerOut(&c, ofst);
 
-  SimpleContainerClear(&c);
+  ContainerClear(&c);
 
   fprintf(stdout, "Empty Container.\n");
-  SimpleContainerOut(&c, stdout);
+  ContainerOut(&c, stdout);
 
   fprintf(ofst, "Empty Container.\n");
-  SimpleContainerOut(&c, ofst);
+  ContainerOut(&c, ofst);
 
   ContainerIn(&c, ifst_coord, &coordFactory);
   fclose(ifst_coord);
@@ -65,7 +65,7 @@ int main() {
   ContainerClear(&c);
 
   fprintf(stdout, "Empty Container.\n");
-  SimpleContainerOut(&c, stdout);
+  ContainerOut(&c, stdout);
 
   fprintf(ofst, "Empty container.\n");
   ContainerOut(&c, ofst);

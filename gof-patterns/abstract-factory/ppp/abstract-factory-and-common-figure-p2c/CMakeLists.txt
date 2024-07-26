@@ -33,8 +33,12 @@ set(SOURCE_FILES
     coord-rectangle-inout.c
     coord-triangle-inout.c
 
-    figures-input.c
+    figure-factory.c
     figure-out.c
+    figures-input.c
+
+    rectangle-inout.c
+    triangle-inout.c
 
     container.c
 )

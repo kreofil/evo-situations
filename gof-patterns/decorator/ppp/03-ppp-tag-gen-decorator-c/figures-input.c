@@ -21,10 +21,12 @@ Figure* FigureCreateAndIn(FILE* ifst)
     fscanf(ifst, "%d", &(k));
     switch (k) {
     case 1:
-        sp = create_spec(Figure<decor<Figure<rect> > > );
+        // sp = create_spec(Figure <decor< Figure<rect> > > );
+        sp = create_spec(Figure.decor.Figure.rect);
         break;
     case 2:
-        sp = create_spec(Figure <decor< Figure<trian> > > );
+        // sp = create_spec(Figure <decor< Figure<trian> > > );
+        sp = create_spec(Figure.decor.Figure.trian);
         break;
     default:
         return 0;

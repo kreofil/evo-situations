@@ -12,7 +12,7 @@ void FigureIn<Figure * f>(FILE* file);
 
 //------------------------------------------------------------------------------
 // Ввод фигуры совместно с содержимым декоратора
-void FigureIn<Figure<decor> * d>(FILE* ifst)
+void FigureIn<Figure.decor * d>(FILE* ifst)
 {
     // В начале вводятся параметры подключенной фигуры
     FigureIn<d->@f>(ifst);

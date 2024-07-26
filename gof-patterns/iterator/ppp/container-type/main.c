@@ -16,7 +16,7 @@ typedef struct Int {int x;} Int;
 Value + <Int;>;
 
 // Обработчик специализации для целочисленных значений
-void OutValue<Value<Int>* value>(FILE* file) {
+void OutValue<Value.Int* value>(FILE* file) {
   fprintf(file, "value = %d", value->@x);
 }
 // void OutValue<Value<int>* value>(FILE* file) {
@@ -29,19 +29,19 @@ int main(void) {
   //----------------------------------------------------------------------------
 
   // Формирование пустого контейнера
-  struct Container<Array>  array;
+  struct Container.Array  array;
   InitContainer<&array>();
   OutContainerValues<&array>(stdout);
   printf("\n");
 
   // Создание нового значения
-  struct Value<Int> v1;
+  struct Value.Int v1;
   v1.@x = 10;
   // OutValue<&v1>(stdout);
 
   // Динамическое создание нового элемента
-  struct Value<Int>* pvInt;
-  pvInt = create_spec<struct Value<struct Int> >();
+  struct Value.Int* pvInt;
+  pvInt = create_spec(Value.Int);
   pvInt->@x = 20;
   struct Value* pv = pvInt;
   // OutValue<pv>(stdout);
@@ -52,7 +52,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<struct Int> >();
+  pvInt = create_spec(Value.Int);
   pvInt->@x = 30;
   // OutValue<pvInt>(stdout);
 
@@ -62,7 +62,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<struct Int> >();
+  pvInt = create_spec(Value.Int);
   pvInt->@x = 40;
   // OutValue<pvInt>(stdout);
 
@@ -72,7 +72,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<struct Int> >();
+  pvInt = create_spec(Value.Int);
   pvInt->@x = v1.@x;
   // OutValue<pvInt>(stdout);
 
@@ -114,7 +114,7 @@ int main(void) {
   //----------------------------------------------------------------------------
 
   // Формирование пустого контейнера
-  struct Container<RingList>  ringList;
+  struct Container.RingList  ringList;
   InitContainer<&ringList>();
   OutContainerValues<&ringList>(stdout);
   printf("\n");
@@ -126,7 +126,7 @@ int main(void) {
 
   // Динамическое создание нового элемента
   // struct Value<Int>* pvInt;
-  pvInt = create_spec<struct Value<struct Int> >();
+  pvInt = create_spec(Value.Int);
   pvInt->@x = 220;
   pv = pvInt;
   // OutValue<pv>(stdout);
@@ -137,7 +137,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<struct Int> >();
+  pvInt = create_spec(Value.Int);
   pvInt->@x = 330;
   // OutValue<pvInt>(stdout);
 
@@ -147,7 +147,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<struct Int> >();
+  pvInt = create_spec(Value.Int);
   pvInt->@x = 440;
   // OutValue<pvInt>(stdout);
 
@@ -157,7 +157,7 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec<struct Value<struct Int> >();
+  pvInt = create_spec(Value.Int);
   pvInt->@x = v1.@x;
   // OutValue<pvInt>(stdout);
 

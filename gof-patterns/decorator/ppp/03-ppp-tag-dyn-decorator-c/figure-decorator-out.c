@@ -12,7 +12,7 @@ void FigureOut<Figure * f>(FILE* ofst);
 
 //------------------------------------------------------------------------------
 // Ввод фигуры совместно с содержимым декоратора
-void FigureOut<Figure<decor> * d>(FILE* ofst)
+void FigureOut<Figure.decor * d>(FILE* ofst)
 {
     // В начале выводится содержимое фигуры
     FigureOut<d->@f>(ofst);

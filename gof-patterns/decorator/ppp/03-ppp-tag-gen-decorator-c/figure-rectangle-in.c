@@ -15,6 +15,6 @@ void FigureIn<Figure *f>(FILE* file);
 
 //------------------------------------------------------------------------------
 // Ввод прямоугольника как фигуры
-void FigureIn<Figure<rect> *f>(FILE* ifst) {
+void FigureIn<Figure.rect *f>(FILE* ifst) {
   RectangleIn(&(f->@), ifst);
 }

@@ -16,7 +16,7 @@ typedef struct Creator {} <rect, trian: void> Creator;
 // Обобщенная функция создателя
 Figure* CreateFigure<Creator *f>();
 // Обработчики специализаций
-Figure* CreateFigure<Creator<rect>  *f>();
-Figure* CreateFigure<Creator<trian> *f>();
+Figure* CreateFigure<Creator.rect  *f>();
+Figure* CreateFigure<Creator.trian *f>();
 
 #endif // __simple_creator__

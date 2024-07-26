@@ -53,7 +53,7 @@ typedef struct RectPreimeter {Rectangle r; double p;} RectPreimeter;
 
 // Вывод результата вычислений периметра конкретно прямоугольника
 void PrintRectPerimeter(RectPreimeter* rp, const char* str) {
-    printf("Perimeter of %s = %f", str, rp->p);
+    printf("Perimeter of %s = %f\n", str, rp->p);
 }
 
 // Специализация для потока
@@ -61,7 +61,7 @@ ThreadData + <RectPreimeter;>;
 
 // Обработчик специализации, запускаемый в потоке
 // вычисляет периметр прямоугольника.
-void RunThread<ThreadData<RectPreimeter> *rp>() {
+void RunThread<ThreadData.RectPreimeter *rp>() {
   rp->@p = (double)((rp->@r.x+rp->@r.y)*2);
 }
 
@@ -74,34 +74,34 @@ int main () {
     // Если инициализация напрямую еще не работает.
     // Ее можно заменить на присваивания.
     // Представлен вариант инициализации не всех полей. Может его и не будет.
-    struct ThreadData<RectPreimeter> thread1; //= {0}<{3,5,0.0}>;
+    struct ThreadData.RectPreimeter thread1; //= {0}<{3,5,0.0}>;
     thread1.threadId = 0;
     thread1.@r.x = 3;
     thread1.@r.y = 5;
     thread1.@p = 0.0;
-    struct ThreadData<RectPreimeter> thread2; //= {0}<{7,4,0.0}>;
+    struct ThreadData.RectPreimeter thread2; //= {0}<{7,4,0.0}>;
     thread2.threadId = 0;
     thread2.@r.x = 7;
     thread2.@r.y = 4;
     thread2.@p = 0.0;
-    struct ThreadData<RectPreimeter> thread3; //= {0}<{6,8,0.0}>;
+    struct ThreadData.RectPreimeter thread3; //= {0}<{6,8,0.0}>;
     thread3.threadId = 0;
     thread3.@r.x = 6;
     thread3.@r.y = 8;
     thread3.@p = 0.0;
 
     // Далее запуск трех потоков
-    StartThread(&thread1);
-    StartThread(&thread2);
-    StartThread(&thread3);
+    StartThread((ThreadData*)&thread1);
+    StartThread((ThreadData*)&thread2);
+    StartThread((ThreadData*)&thread3);
     // StartThread((ThreadData*)&thread1);
     // StartThread((ThreadData*)&thread2);
     // StartThread((ThreadData*)&thread3);
 
     // Ожидание завершения потоков
-    WaitThread(&thread1);
-    WaitThread(&thread2);
-    WaitThread(&thread3);
+    WaitThread((ThreadData*)&thread1);
+    WaitThread((ThreadData*)&thread2);
+    WaitThread((ThreadData*)&thread3);
     // WaitThread((ThreadData*)&thread1);
     // WaitThread((ThreadData*)&thread2);
     // WaitThread((ThreadData*)&thread3);

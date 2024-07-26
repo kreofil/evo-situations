@@ -22,10 +22,10 @@ Figure* FigureCreateAndIn(FILE* ifst)
     fscanf(ifst, "%d", &(k));
     switch (k) {
     case 1:
-        sp = create_spec(Figure<Decorator<Figure <Rectangle> > >);
+        sp = create_spec(Figure.Decorator.Figure.Rectangle);
         break;
     case 2:
-        sp = create_spec(Figure<Decorator<Figure <Triangle> > >);
+        sp = create_spec(Figure.Decorator.Figure.Triangle);
         break;
     default:
         return 0;

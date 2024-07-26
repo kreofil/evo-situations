@@ -21,26 +21,26 @@ void TriangleOut<Triangle *t>(FILE* ofst) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, осуществляющий ввод простых треугольников
-void TriangleIn<Triangle<SimpleTriangle> *t>(FILE* ifst) {
+void TriangleIn<Triangle.SimpleTriangle *t>(FILE* ifst) {
   SimpleTriangleIn(&(t->@), ifst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, осуществляющий вывод простых треугольников
-void TriangleOut<Triangle<SimpleTriangle> *t>(FILE* ofst) {
+void TriangleOut<Triangle.SimpleTriangle *t>(FILE* ofst) {
   SimpleTriangleOut(&(t->@), ofst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, осуществляющий ввод треугольников,
 // задаваемых координатами
-void TriangleIn<Triangle<CoordTriangle> *t>(FILE* ifst) {
+void TriangleIn<Triangle.CoordTriangle *t>(FILE* ifst) {
   CoordTriangleIn(&(t->@), ifst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, осуществляющий вывод треугольников,
 // задаваемых координатами
-void TriangleOut<Triangle<CoordTriangle> *t>(FILE* ofst) {
+void TriangleOut<Triangle.CoordTriangle *t>(FILE* ofst) {
   CoordTriangleOut(&(t->@), ofst);
 }

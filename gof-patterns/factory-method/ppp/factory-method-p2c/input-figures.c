@@ -14,8 +14,8 @@ void FigureIn<Figure *f>(FILE* file);
 // Ввод параметров обобщенной фигуры из стандартного потока ввода
 // Для создания фигур используется фабричный метод
 void FigureCreateAndIn(FILE* ifst, FigureContainer* pfc) {
-  struct Creator<rect>  rectangleCreator;
-  struct Creator<trian> triangleCreator;
+  struct Creator.rect  rectangleCreator;
+  struct Creator.trian triangleCreator;
   struct Figure* pf;
   int k = 0;
   while(!feof(ifst))

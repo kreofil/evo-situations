@@ -17,6 +17,6 @@ void FigureIn<struct Figure *f>(FILE* file);
 //------------------------------------------------------------------------------
 // Ввод прямоугольника как фигуры
 // void FigureIn<Figure<Rectangle> *f>(FILE* ifst) {
-void FigureIn<struct Figure<struct Rectangle> *f>(FILE* ifst) {
+void FigureIn<Figure.Rectangle *f>(FILE* ifst) {
   RectangleIn(&(f->@), ifst);
 }

@@ -15,6 +15,6 @@ void FigureOut<Figure *f>(FILE* ofst);
 
 //------------------------------------------------------------------------------
 // Ввод треугольника как фигуры
-void FigureOut<Figure<trian> *f>(FILE* ofst) {
+void FigureOut<Figure.trian *f>(FILE* ofst) {
   TriangleOut(&(f->@), ofst);
 }

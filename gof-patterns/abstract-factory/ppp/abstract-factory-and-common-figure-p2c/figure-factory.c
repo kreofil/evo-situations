@@ -9,34 +9,32 @@
 //------------------------------------------------------------------------------
 // Обобщенная функция создания прямоугольника
 // Не имеет реализации
-Rectangle* CreateRectangle<FigureFactory *factory>() {} //= 0;
+Rectangle* CreateRectangle<FigureFactory *factory>() = 0;
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, создающий простой прямоугольник
-Rectangle* CreateRectangle<FigureFactory<simple> *factory>() {
-  return create_spec(Rectangle<SimpleRectangle>);
+Rectangle* CreateRectangle<FigureFactory.simple *factory>() {
+  return create_spec(Rectangle.SimpleRectangle);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, создающий прямоугольник, заданный координатами
-Rectangle* CreateRectangle<FigureFactory<coord> *factory>() {
-  return create_spec(Rectangle<CoordRectangle>);
+Rectangle* CreateRectangle<FigureFactory.coord *factory>() {
+  return create_spec(Rectangle.CoordRectangle);
 }
 
 //------------------------------------------------------------------------------
 // Обобщенная функция создания треугольника
-Triangle* CreateTriangle<FigureFactory *factory>() {} //= 0;
+Triangle* CreateTriangle<FigureFactory *factory>() = 0;
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, создающий простой треугольник
-Triangle* CreateTriangle<FigureFactory<simple> *factory>() {
-  return create_spec(Triangle<SimpleTriangle>);
+Triangle* CreateTriangle<FigureFactory.simple *factory>() {
+  return create_spec(Triangle.SimpleTriangle);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, создающий треугольник, заданный координатами
-Triangle* CreateTriangle<FigureFactory<coord> *factory>() {
-  return create_spec(Triangle<CoordTriangle>);
+Triangle* CreateTriangle<FigureFactory.coord *factory>() {
+  return create_spec(Triangle.CoordTriangle);
 }
-
-#endif // __figure_factory__

@@ -34,8 +34,8 @@ int main() {
   FILE* ifst_coord = fopen(coordFigureFile, "r");
   FILE* ofst = fopen(resultFigureFile, "w");
 
-  struct FigureFactory<simple> simpleFactory;
-  struct FigureFactory<coord>  coordFactory;
+  struct FigureFactory.simple simpleFactory;
+  struct FigureFactory.coord  coordFactory;
   RectangleContainer rc;
   TriangleContainer  tc;
 

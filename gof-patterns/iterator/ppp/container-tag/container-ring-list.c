@@ -15,26 +15,26 @@ Container + <rlist: RingList;>;
 // выступающего в роли контейнера
 
 // Начальная инициализация контейнера
-void InitContainer<Container<rlist> >* container>() {
+void InitContainer<Container.rlist* container>() {
   RingList* ringList = &(container->@);
   InitRingList(ringList);
 }
 
 // Добавление значения в хвост контейнера
-void AppendContainer<Container<rlist> >* container>(Value* value) {
+void AppendContainer<Container.rlist* container>(Value* value) {
   RingList* ringList = &(container->@);
   AppendRingList(ringList, value);
 }
 
 // Вывод элементов контейнера в указанный файл, который
 // должен быть предварително открыт
-void OutContainerValues<Container<rlist> >* container>(FILE* file)  {
+void OutContainerValues<Container.rlist* container>(FILE* file)  {
   RingList* ringList = &(container->@);
   OutRingListValues(file, ringList);
 }
 
 // Удаление всех элементов из контейнера (очистка от данных)
-void EmptyContainer<Container<rlist> >* container>() {
+void EmptyContainer<Container.rlist* container>() {
   RingList* ringList = &(container->@);
   EmptyRingList(ringList);
 }
@@ -44,7 +44,7 @@ void EmptyContainer<Container<rlist> >* container>() {
 
 //------------------------------------------------------------------------------
 // Указатель на значение первого элемента контейнера
-void First<Container<rlist> >* container>() {
+void First<Container.rlist* container>() {
   RingList* ringList = &(container->@);
   if(ringList->tail == NULL) {
     ringList->previous = NULL;
@@ -57,7 +57,7 @@ void First<Container<rlist> >* container>() {
 
 //------------------------------------------------------------------------------
 // Перевод указателя на значение следующего элемента контейнера
-void Next<Container<rlist> >* container>() {
+void Next<Container.rlist* container>() {
   RingList* ringList = &(container->@);
   if(ringList->tail == NULL) {
     ringList->current = NULL;
@@ -74,7 +74,7 @@ void Next<Container<rlist> >* container>() {
 
 //------------------------------------------------------------------------------
 // Проверка выхода за последний элемент контейнера
-_Bool IsDone<Container<rlist> >* container>() {
+_Bool IsDone<Container.rlist* container>() {
   RingList* ringList = &(container->@);
   // Текущим стал первый, а предыдущий сбросился в NULL
   if((ringList->current == ringList->tail->next)
@@ -87,7 +87,7 @@ _Bool IsDone<Container<rlist> >* container>() {
 
 //------------------------------------------------------------------------------
 // Указатель на значение текущего элемента контейнера
-Value* CurrentItem<Container<rlist> >* container>() {
+Value* CurrentItem<Container.rlist* container>() {
   RingList* ringList = &(container->@);
   if(ringList->current == NULL) {
     return NULL;

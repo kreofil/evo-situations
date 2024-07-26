@@ -17,12 +17,12 @@ void FigureOut<Figure *f>(FILE* ofst) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий вывод фигуры из семейства прямоугольников
-void FigureOut<Figure<SimpleRectangle> *f>(FILE* ofst) {
+void FigureOut<Figure.SimpleRectangle *f>(FILE* ofst) {
   SimpleRectangleOut(&(f->@), ofst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик, осуществляющий вывод фигуры из семейства треугольников
-void FigureOut<Figure<SimpleTriangle> *f>(FILE* ofst) {
+void FigureOut<Figure.SimpleTriangle *f>(FILE* ofst) {
   SimpleTriangleOut(&(f->@), ofst);
 }

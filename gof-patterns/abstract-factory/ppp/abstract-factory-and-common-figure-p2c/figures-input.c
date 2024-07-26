@@ -17,25 +17,25 @@ void TriangleIn<Triangle *r>(FILE* ifst);
 //------------------------------------------------------------------------------
 // Ввод параметров одной из фигур из файла
 Figure* FigureCreateAndIn(FILE* ifst, struct FigureFactory* factory) {
-  struct Figure *pr;   // указатель на специализированный прямоугольник
-  struct Figure *pt;   // указатель на специализированный треугольник
+  struct Figure.rect *pr;   // указатель на специализированный прямоугольник
+  struct Figure.trian *pt;  // указатель на специализированный треугольник
   Rectangle *r;
   Triangle  *t;
   int k;
   fscanf(ifst, "%d", &(k));
   switch(k) {
   case 1:
-    pr = create_spec(struct Figure<rect>);     // Создается оболочка
+    pr = create_spec(Figure.rect);     // Создается оболочка
     r = CreateRectangle<factory>(); // Запуск фабрики прямоугольников
     RectangleIn<r>(ifst);
     pr->@ = r;
-    break;
+    return (Figure*)pr;
   case 2:
-    pt = create_spec(struct Figure<trian>);    // Создается оболочка
+    pt = create_spec(Figure.trian);    // Создается оболочка
     t = CreateTriangle<factory>();  // Запуск фабрики треугольников
     TriangleIn<t>(ifst);
     pt->@ = t;
-    break;
+    return (Figure*)pt;
   default:
     return 0;
   }

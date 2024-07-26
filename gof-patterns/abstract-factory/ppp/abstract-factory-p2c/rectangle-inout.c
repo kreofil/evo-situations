@@ -21,26 +21,26 @@ void RectangleOut<Rectangle *r>(FILE* ofst) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, осуществляющий ввод простых прямоугольников
-void RectangleIn<Rectangle<SimpleRectangle> *r>(FILE* ifst) {
+void RectangleIn<Rectangle.SimpleRectangle *r>(FILE* ifst) {
   SimpleRectangleIn(&(r->@), ifst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, осуществляющий вывод простых прямоугольников
-void RectangleOut<Rectangle<SimpleRectangle> *r>(FILE* ofst) {
+void RectangleOut<Rectangle.SimpleRectangle *r>(FILE* ofst) {
   SimpleRectangleOut(&(r->@), ofst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, осуществляющий ввод прямоугольников,
 // задаваемых координатами
-void RectangleIn<Rectangle<CoordRectangle> *r>(FILE* ifst) {
+void RectangleIn<Rectangle.CoordRectangle *r>(FILE* ifst) {
   CoordRectangleIn(&(r->@), ifst);
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации, осуществляющий вывод прямоугольников,
 // задаваемых координатами
-void RectangleOut<Rectangle<CoordRectangle> *r>(FILE* ofst) {
+void RectangleOut<Rectangle.CoordRectangle *r>(FILE* ofst) {
   CoordRectangleOut(&(r->@), ofst);
 }

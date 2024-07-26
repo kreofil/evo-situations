@@ -14,22 +14,21 @@ void FigureIn<Figure * f>(FILE* file);
 void DecoratorIn<Decorator * d>(FILE* file) {}
 
 //------------------------------------------------------------------------------
-void DecoratorIn<Decorator<Figure> * d>(FILE* ifst) {
+void DecoratorIn<Decorator.Figure * d>(FILE* ifst) {
     FigureIn<&(d->@)>(ifst);
     fscanf(ifst, "%x", &(d->color));
 }
 
 //------------------------------------------------------------------------------
 // Ввод фигуры совместно с содержимым декоратора
-void FigureIn<Figure<Decorator> * d>(FILE* ifst)
+void FigureIn<Figure.Decorator * d>(FILE* ifst)
 {
     DecoratorIn<&(d->@)>(ifst);
 }
 
 //------------------------------------------------------------------------------
 // Ввод фигуры совместно с содержимым декоратора
-// void FigureIn<Figure<Decorator> * d>(FILE* ifst)
-// void FigureIn<Figure<Decorator> * d>(FILE* ifst)
+// void FigureIn<Figure.Decorator * d>(FILE* ifst)
 // {
 //     // В начале вводятся параметры подключенной фигуры
 //     FigureIn<&(d->@.@>(ifst);

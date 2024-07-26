@@ -11,11 +11,11 @@
 // Прототип функции ввода треугольника
 void TriangleIn(Triangle *t, FILE* ifst);
 // Прототип обобщеннай функции ввода фигуры
-// void FigureIn<Figure *f>(FILE* file);
-void FigureIn<struct Figure *f>(FILE* file);
+void FigureIn<Figure *f>(FILE* file);
+// void FigureIn<struct Figure *f>(FILE* file);
 
 //------------------------------------------------------------------------------
 // Ввод треугольника как фигуры
-void FigureIn<Figure<Triangle> *f>(FILE* ifst) {
+void FigureIn<Figure.Triangle *f>(FILE* ifst) {
   TriangleIn(&(f->@), ifst);
 }
