@@ -1,0 +1,17 @@
+Filled container. 
+Container is containing 13 elements.
+0: Rectangle is as Specialization of Figure: x = 3, y = 4
+1: Triangle is as Specialization of Figure: a = 1, b = 1, c = 1
+2: Rectangle is as Specialization of Figure: x = 30, y = 40
+3: Triangle is as Specialization of Figure: a = 2, b = 2, c = 1
+4: Rectangle is as Specialization of Figure: x = 13, y = 14
+5: Triangle is as Specialization of Figure: a = 10, b = 10, c = 10
+6: Rectangle is as Specialization of Figure: x = 330, y = 49
+7: Triangle is as Specialization of Figure: a = 3, b = 4, c = 5
+8: Circle is as Specialization of Figure: r = 10
+9: Circle is as Specialization of Figure: r = 15
+10: Circle is as Specialization of Figure: r = 6
+11: Rectangle is as Specialization of Figure: x = 5, y = 10
+12: Circle is as Specialization of Figure: r = 8
+Empty container. 
+Container is containing 0 elements.
