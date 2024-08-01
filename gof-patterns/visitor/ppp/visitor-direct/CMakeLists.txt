@@ -1,6 +1,6 @@
 # set minimum cmake version
 cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
-project(evo-demo)               # Название проекта
+project(visitor)               # Название проекта
 SET(CMAKE_C_COMPILER ppclang)
 set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type is Debug" FORCE)
 
@@ -41,4 +41,4 @@ set(SOURCE_FILES
     main.c
 )
 
-add_executable(evo-demo ${SOURCE_FILES})
+add_executable(visitor ${SOURCE_FILES})

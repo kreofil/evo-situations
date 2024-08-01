@@ -1,6 +1,6 @@
 # set minimum cmake version
 cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
-project(evo-demo)               # Название проекта
+project(factory-method)               # Название проекта
 set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type is Debug" FORCE)
 
 set(BUILD_DIR "${CMAKE_BINARY_DIR}")
