@@ -15,13 +15,17 @@ void DrawMap(Map* map) {
                 printf(" ");
                 break;
             case locked:
-                printf("#");
+                // printf("#");
+                printf("\x1b[1;30m#\x1b[0m");
                 break;
             case food:
-                printf("*");
+                // printf("*");
+                // printf("\x1b[1;32m%c\x1b[0m", '*');
+                printf("\x1b[1;32m*\x1b[0m");
                 break;
             case feeder:
-                printf("O");
+                // printf("O");
+                printf("\x1b[1;31mO\x1b[0m");
                 break;
             default:
                 printf("?");

@@ -115,7 +115,7 @@ void EntityNextState<Entity* entity>() {
 
 // Обработчик, реализующий алгоритм поведения пищи в данной клетке
 void EntityNextState<Entity.food* entity>() {
-    printf("Entity.food\n");
+    // printf("Entity.food\n");
     int clonePosition;
     // запуск алгоритма поведения пищи в данной клетке
     // foodState = FoodNextState(&entity->food);
@@ -127,7 +127,7 @@ void EntityNextState<Entity.food* entity>() {
 
 // Обработчик, реализующий алгоритм поведения пищи в данной клетке
 void EntityNextState<Entity.feeder* entity>() {
-    printf("Entity.feeder\n");
+    // printf("Entity.feeder\n");
     // запуск алгоритма поведения пищееда в данной клетке
     // FeederNextState(entity);
     FeederNextState(entity);
@@ -144,7 +144,7 @@ void EntityDebugOut<Entity* entity>() {
 
 // Обработчик, реализующий тестовый вывод пищи в данной клетке
 void EntityDebugOut<Entity.food* entity>() {
-    printf("Entity.food: ");
+    // printf("Entity.food: ");
     printf("Tag = %d; position = (%d, %d)\n",
             (int)entity->tag, entity->i, entity->j
     );

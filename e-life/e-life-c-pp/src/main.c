@@ -47,21 +47,21 @@ int main (/*int argc, char** argv*/)
     while(1) {
         clrscr();
         DrawWorld(&eWorld);
-        printf("Step:    %d\n", step++);
-        printf("Foods:   %d\n", eWorld.entityList.foodCount);
-        printf("Feeders: %d\n", eWorld.entityList.feederCount);
-        printf("Entities: %d\n", eWorld.entityList.busyCount);
-        printf("Empty: %d\n", eWorld.entityList.freeCount);
-        printf("Space: %d\n", eWorld.map.spaceCount);
+        printf("\x1b[1;33mStep:    \x1b[1;37m%d\x1b[0m\n", step++);
+        printf("\x1b[1;33mFoods:   \x1b[1;37m%d\x1b[0m\n", eWorld.entityList.foodCount);
+        printf("\x1b[1;33mFeeders: \x1b[1;37m%d\x1b[0m\n", eWorld.entityList.feederCount);
+        printf("\x1b[1;33mEntities: \x1b[1;37m%d\x1b[0m\n", eWorld.entityList.busyCount);
+        printf("\x1b[1;33mEmpty: \x1b[1;37m%d\x1b[0m\n", eWorld.entityList.freeCount);
+        printf("\x1b[1;33mSpace: \x1b[1;37m%d\x1b[0m\n", eWorld.map.spaceCount);
         // if(eWorld.map.spaceCount == eWorld.entityList.foodCount) {
         if((eWorld.entityList.feederCount == 0) && (eWorld.entityList.foodCount == 0)) {
                 // Пища закончилась. Пищееды вымерли.
-                printf("GAME OVER!!!\nThe World is dead!!!\n");
+                printf("\x1b[1;31mGAME OVER!!!\nThe World is dead!!!\n\x1b[0m");
                 exit(10);
         }
         if((eWorld.entityList.feederCount == 0) && (eWorld.entityList.foodCount != 0)) {
                 // Пищееды вымерли. Осталась только пища
-                perror("GAME OVER!!!\nOnly Food will be more...\n");
+                perror("\x1b[1;32mGAME OVER!!!\nOnly Food will be more...\n\x1b[0m");
                 exit(11);
         }
         sleep(1);
