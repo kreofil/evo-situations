@@ -94,17 +94,11 @@ int main () {
     StartThread((ThreadData*)&thread1);
     StartThread((ThreadData*)&thread2);
     StartThread((ThreadData*)&thread3);
-    // StartThread((ThreadData*)&thread1);
-    // StartThread((ThreadData*)&thread2);
-    // StartThread((ThreadData*)&thread3);
 
     // Ожидание завершения потоков
     WaitThread((ThreadData*)&thread1);
     WaitThread((ThreadData*)&thread2);
     WaitThread((ThreadData*)&thread3);
-    // WaitThread((ThreadData*)&thread1);
-    // WaitThread((ThreadData*)&thread2);
-    // WaitThread((ThreadData*)&thread3);
 
     // Печать периметров
     PrintRectPerimeter(&(thread1.@), "Tread1");
