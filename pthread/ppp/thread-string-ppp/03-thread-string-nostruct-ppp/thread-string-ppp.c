@@ -52,6 +52,7 @@ ThreadData + <str: char*;>;
 // Осуществляет вывод строки
 void RunThread<ThreadData.str *string>() {
     for (unsigned int i = 0; i < 20; i++) {
+        printf("%d) ", i);
         puts(string->@);
         wait_thread();
     }
