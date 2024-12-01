@@ -9,9 +9,9 @@
 // Обобщенная функция определяющая, является ли фигура прямоугольником
 _Bool isFigureRectangle(Figure * f) {
   struct Figure.rect figRect;
-  int specIndex = spec_index_cmp(&figRect, f);
-  if(specIndex >= 0) {
-  // if(spec_index_cmp(&figRect, f) >= 0) {
+  // int specIndex = spec_index_cmp(&figRect, f);
+  // if(specIndex >= 0) {
+  if(spec_index_cmp(&figRect, f) >= 0) {
     return 1;
   }
   return 0;
