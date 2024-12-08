@@ -1,10 +1,12 @@
+[readme на русском](readme-ru.md)
+
 # Examples of programs demonstrating the capabilities of procedural-parametric programming
 
 Along with examples of procedural-parametric programs, examples of programs written using other programming paradigms are also provided for comparison. The programs are divided into thematic directories.
 
 ## evolution
 
-Examples demonstrating the capabilities of evolutionary program extension. That is, adding new functionality and data without changing the previously written code. The main idea is to compare the PP paradigm with other programming paradigms.
+The [evolution](evolution) directory contains examples demonstrating the possibilities of evolutionary program expansion. That is, adding new functionality and data without changing the previously written code. The main idea is to compare the PP paradigm with other programming paradigms.
 
 They are considered as options that provide direct extension using the techniques that this or that paradigm provides. In this situation, where direct solutions do not provide evolutionary extension, an extension with changes is implemented.
 
