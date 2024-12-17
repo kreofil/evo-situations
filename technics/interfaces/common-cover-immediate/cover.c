@@ -31,6 +31,7 @@ void RectangleLink(RectangleCover* rc) {
 // Создание прямоугольника в обертке
 RectangleCover* NewRectangleCover() {
   RectangleCover* rc = malloc(sizeof(RectangleCover));
+  // RectangleCover* rc = create_spec(RectangleCover);
   RectangleLink(rc);
   // AddInterfacesToRectangleCover(rc);
   return rc;
