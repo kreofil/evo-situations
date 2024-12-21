@@ -19,12 +19,12 @@ int main () {
     thread1.@r.y = 5;
     thread1.@p = 0.0;
     struct ThreadData.RectPerimeter thread2; //= {0}<{7,4,0.0}>;
-    thread2.threadId = 0;
+    thread2.threadId = 1;
     thread2.@r.x = 7;
     thread2.@r.y = 4;
     thread2.@p = 0.0;
     struct ThreadData.RectPerimeter thread3; //= {0}<{6,8,0.0}>;
-    thread3.threadId = 0;
+    thread3.threadId = 2;
     thread3.@r.x = 6;
     thread3.@r.y = 8;
     thread3.@p = 0.0;

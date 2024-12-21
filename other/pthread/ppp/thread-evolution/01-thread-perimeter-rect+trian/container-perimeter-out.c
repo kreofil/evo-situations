@@ -44,7 +44,7 @@ void RunThread<ThreadData.FigurePerimeterData *figurePerimeter>() {
 double CalcFigurePerimetersInContainer(Container *c) {
   struct ThreadData.FigurePerimeterData perimeterArray[c->len];
   struct ThreadData.FigurePerimeterData *pElement;
-  // Запуск потоков, осуществлеющих вычисление периметров для фигур
+  // Запуск потоков, осуществляющих вычисление периметров для фигур
   for(int i = 0; i < c->len; ++i) {
     init_spec(ThreadData.FigurePerimeterData, (perimeterArray+i));
     pElement = (perimeterArray+i);

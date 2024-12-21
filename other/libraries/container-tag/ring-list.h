@@ -1,3 +1,6 @@
+#ifndef __ring_list__
+#define __ring_list__
+
 // list.h
 // Объявление структур и  базовых функций, связанных с обработкой абстрактного
 // однонаправленного кольцевого списка
@@ -43,3 +46,4 @@ void EmptyRingList(RingList* list);
 // Вывод значения указанного элемента, из данного узла
 void OutCurrentRingListValue(FILE* file, Value* value);
 
+#endif // __ring_list__
