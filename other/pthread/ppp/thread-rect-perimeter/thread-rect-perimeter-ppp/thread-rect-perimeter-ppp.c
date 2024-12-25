@@ -53,7 +53,7 @@ typedef struct RectPerimeter {Rectangle r; double p;} RectPerimeter;
 
 // Вывод результата вычислений периметра конкретно прямоугольника
 void PrintRectPerimeter(RectPerimeter* rp, const char* str) {
-    printf("Perimeter of %s = %f\n", str, rp->p);
+    printf("%s: Perimeter = %f\n", str, rp->p);
 }
 
 // Специализация для потока
@@ -101,9 +101,9 @@ int main () {
     WaitThread((ThreadData*)&thread3);
 
     // Печать периметров
-    PrintRectPerimeter(&(thread1.@), "Tread1");
-    PrintRectPerimeter(&(thread2.@), "Tread2");
-    PrintRectPerimeter(&(thread3.@), "Tread3");
+    PrintRectPerimeter(&(thread1.@), "Thread 1");
+    PrintRectPerimeter(&(thread2.@), "Thread 2");
+    PrintRectPerimeter(&(thread3.@), "Thread 3");
 
     return 0;
 }

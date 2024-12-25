@@ -31,8 +31,7 @@ public:
         p = double(2*(x+y));
     }
     void print(const char* str) {
-        std::cout << "Perimeter of "
-                  << str << " = " << p << "\n";
+        std::cout << str << ": Perimeter = " << p << "\n";
     }
 
 protected:
@@ -54,9 +53,9 @@ int main (int argc, char *argv[], char *envp[]) {
     thread2.wait();
     thread3.wait();
 
-    thread1.print("Tread1");
-    thread2.print("Tread2");
-    thread3.print("Tread3");
+    thread1.print("Thread 1");
+    thread2.print("Thread 2");
+    thread3.print("Thread 3");
 
     return EXIT_SUCCESS;
 }
