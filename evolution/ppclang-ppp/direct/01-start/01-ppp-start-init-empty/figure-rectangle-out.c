@@ -14,7 +14,9 @@ void RectangleOut(Rectangle *r, FILE* ifst);
 void FigureOut<Figure *f>(FILE* ofst);
 
 //------------------------------------------------------------------------------
-// Вывод прямоугольника как фигуры
+// Ввод прямоугольника как фигуры
 void FigureOut<Figure.rect *f>(FILE* ofst) {
-  RectangleOut(&(f->@), ofst);
+  // Rectangle *r = f->@;
+  // RectangleOut(r, ofst);
+  RectangleOut(f->@, ofst); // Заработало
 }

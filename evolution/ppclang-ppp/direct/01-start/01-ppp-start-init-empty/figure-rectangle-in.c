@@ -9,25 +9,14 @@
 
 //------------------------------------------------------------------------------
 // Прототип функции ввода прямоугольника
-void RectangleIn(Rectangle*, FILE*);
-// Прототип обобщенной функции ввода фигуры
+void RectangleIn(Rectangle *r, FILE* ifst);
+// Прототип обобщеннай функции ввода фигуры
 void FigureIn<Figure *f>(FILE* file);
-// Прототип обобщенной функции создания фигуры клонированием
-Figure* FigureCreateUseTag<Figure *pFig>(int k);
 
 //------------------------------------------------------------------------------
 // Ввод прямоугольника как фигуры
 void FigureIn<Figure.rect *f>(FILE* ifst) {
-  RectangleIn(&(f->@), ifst);
-}
-
-//------------------------------------------------------------------------------
-// Создание прямоугольника как фигуры клонированием
-Figure* FigureCreateUseTag<Figure.rect *pFig>(int k) {
-  if(k == 1) {
-    // printf("k = %d: It is Rectangle\n", k);
-    return create_spec(Figure.rect);
-  } else {
-    return NULL;
-  }
+  // Rectangle *r = f->@;
+  // RectangleIn(r, ifst);
+  RectangleIn(f->@, ifst);  // Заработало
 }

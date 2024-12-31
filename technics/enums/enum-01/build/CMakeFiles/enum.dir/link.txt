@@ -1,0 +1,1 @@
+ppclang -g -Wl,--dependency-file=CMakeFiles/enum.dir/link.d CMakeFiles/enum.dir/main.c.o -o /home/al/Projects/git-books/ppp/programs/technics/enums/enum-01/bin/enum
