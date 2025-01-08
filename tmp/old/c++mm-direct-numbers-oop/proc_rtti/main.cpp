@@ -5,8 +5,8 @@
 #include <iostream>
 using namespace std;
 
-#include "IntClass.h"
-#include "DoubleClass.h"
+#include "int.h"
+#include "double.h"
 
 // Функция вычитания, использующая множественный полиморфизм.
 Number* operator- (Number& n1, Number& n2);

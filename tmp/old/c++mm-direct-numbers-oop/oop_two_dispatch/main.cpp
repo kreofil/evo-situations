@@ -1,19 +1,14 @@
 //------------------------------------------------------------------------------
 // Файл main.cpp - задает тестовую функцию.
 //------------------------------------------------------------------------------
-
-#include <iostream>
-using namespace std;
-
-#include "IntClass.h"
-#include "DoubleClass.h"
+#include "int.h"
+#include "double.h"
 
 // Функция вычитания, использующая множественный полиморфизм.
 Number* operator- (Number& n1, Number& n2);
 
 // Маленький тест.
-int main(void)
-{
+int main() {
 	Number* rez;
 	Int i1(10);
 	i1.StdOut();

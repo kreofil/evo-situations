@@ -1,19 +1,18 @@
 //------------------------------------------------------------------------------
-// Файл main.cpp - задает тестовую функцию.
+// Р¤Р°Р№Р» main.cpp - Р·Р°РґР°РµС‚ С‚РµСЃС‚РѕРІСѓСЋ С„СѓРЅРєС†РёСЋ.
 //------------------------------------------------------------------------------
 
 #include <iostream>
 using namespace std;
 
-#include "IntClass.h"
-#include "DoubleClass.h"
+#include "int.h"
+#include "double.h"
 
-// Функция вычитания, использующая множественный полиморфизм.
+// Р¤СѓРЅРєС†РёСЏ РІС‹С‡РёС‚Р°РЅРёСЏ, РёСЃРїРѕР»СЊР·СѓСЋС‰Р°СЏ РјРЅРѕР¶РµСЃС‚РІРµРЅРЅС‹Р№ РїРѕР»РёРјРѕСЂС„РёР·Рј.
 Number* operator- (Number& n1, Number& n2);
 
-// Маленький тест.
-void main(void)
-{
+// РњР°Р»РµРЅСЊРєРёР№ С‚РµСЃС‚.
+int main() {
 	Number* rez;
 	Int i1(10);
 	i1.StdOut();
@@ -31,4 +30,6 @@ void main(void)
 	rez = i2 - d1;	rez->StdOut(); delete rez;
 	rez = d1 - i2;	rez->StdOut(); delete rez;
 	rez = d2 - i1;	rez->StdOut(); delete rez;
+
+  return 0;
 }

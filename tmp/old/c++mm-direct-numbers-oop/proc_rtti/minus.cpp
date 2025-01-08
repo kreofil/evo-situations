@@ -2,8 +2,8 @@
 // Файл minus.cpp - задает функцию.вычитания
 //------------------------------------------------------------------------------
 
-#include "IntClass.h"
-#include "DoubleClass.h"
+#include "int.h"
+#include "double.h"
 
 // Функция вычитания, использующая только RTTI.
 Number* operator- (Number& n1, Number& n2)
@@ -36,6 +36,7 @@ Number* operator- (Number& n1, Number& n2)
 			return new Double(pDouble1->GetValue() - pDouble2->GetValue());
 		}
 	}
+	return nullptr;
 }
 
 

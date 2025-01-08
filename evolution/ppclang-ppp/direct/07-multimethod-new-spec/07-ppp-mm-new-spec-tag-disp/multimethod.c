@@ -11,34 +11,34 @@
 //------------------------------------------------------------------------------
 // Обобщающая функция, задающая вход во вторую фигуру,
 // Когда первая фигура уже определена и это прямоугольник
-void MultimethodFirstRect<Figure* f2>(Figure.rect* r1, FILE* ofst) {} //= 0;
+static void MultimethodFirstRect<Figure* f2>(Figure.rect* r1, FILE* ofst) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для двух прямоугольников
-void MultimethodFirstRect<Figure.rect* r2>(Figure* r1, FILE* ofst) {
+static void MultimethodFirstRect<Figure.rect* r2>(Figure* r1, FILE* ofst) {
   fprintf(ofst, "Rectangle - Rectangle Combination\n");
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для прямоугольника и треугольника
-void MultimethodFirstRect<Figure.trian* t2>(Figure.rect* r1, FILE* ofst) {
+static void MultimethodFirstRect<Figure.trian* t2>(Figure.rect* r1, FILE* ofst) {
   fprintf(ofst, "Rectangle - Triangle Combination\n");
 }
 
 //------------------------------------------------------------------------------
 // Обобщающая функция, задающая вход во вторую фигуру,
 // Когда первая фигура уже определена и это треугольник
-void MultimethodFirstTrian<Figure* f2>(Figure.trian* t1, FILE* ofst) {} //= 0;
+static void MultimethodFirstTrian<Figure* f2>(Figure.trian* t1, FILE* ofst) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для треугольника и прямоугольника
-void MultimethodFirstTrian<Figure.rect* r2>(Figure.trian* t1, FILE* ofst) {
+static void MultimethodFirstTrian<Figure.rect* r2>(Figure.trian* t1, FILE* ofst) {
   fprintf(ofst, "Triangle - Rectangle Combination\n");
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для двух треугольников
-void MultimethodFirstTrian<Figure.trian* t2>(Figure.trian* t1, FILE* ofst) {
+static void MultimethodFirstTrian<Figure.trian* t2>(Figure.trian* t1, FILE* ofst) {
   fprintf(ofst, "Triangle - Triangle Combination\n");
 }
 

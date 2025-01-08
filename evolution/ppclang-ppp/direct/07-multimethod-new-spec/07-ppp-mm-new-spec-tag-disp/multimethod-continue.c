@@ -10,36 +10,36 @@
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для прямоугольника и круга
-void MultimethodFirstRect<Figure.circ* c2>(Figure.rect* r1, FILE* ofst) {
+static void MultimethodFirstRect<Figure.circ* c2>(Figure.rect* r1, FILE* ofst) {
   fprintf(ofst, "Rectangle - Circle Combination\n");
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для треугольника и круга
-void MultimethodFirstTrian<Figure.circ* c2>(Figure.trian* t1, FILE* ofst) {
+static void MultimethodFirstTrian<Figure.circ* c2>(Figure.trian* t1, FILE* ofst) {
   fprintf(ofst, "Triangle - Circle Combination\n");
 }
 
 //------------------------------------------------------------------------------
 // Обобщающая функция, задающая вход во вторую фигуру,
 // Когда первая фигура уже определена и это круг
-void MultimethodFirstCirc<Figure* f2>(Figure.circ* c1, FILE* ofst) {} //= 0;
+static void MultimethodFirstCirc<Figure* f2>(Figure.circ* c1, FILE* ofst) {} //= 0;
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для круга и прямоугольника
-void MultimethodFirstCirc<Figure.rect* r2>(Figure.circ* c1, FILE* ofst) {
+static void MultimethodFirstCirc<Figure.rect* r2>(Figure.circ* c1, FILE* ofst) {
   fprintf(ofst, "Circle - Rectangle Combination\n");
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для круга и треугольника
-void MultimethodFirstCirc<Figure.trian* t2>(Figure.circ* c1, FILE* ofst) {
+static void MultimethodFirstCirc<Figure.trian* t2>(Figure.circ* c1, FILE* ofst) {
   fprintf(ofst, "Circle - Triangle Combination\n");
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для двух кругов
-void MultimethodFirstCirc<Figure.circ* c2>(Figure.circ* c1, FILE* ofst) {
+static void MultimethodFirstCirc<Figure.circ* c2>(Figure.circ* c1, FILE* ofst) {
   fprintf(ofst, "Circle - Circle Combination\n");
 }
 
