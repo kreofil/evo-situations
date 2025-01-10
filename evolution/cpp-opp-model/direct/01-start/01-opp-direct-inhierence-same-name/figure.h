@@ -15,11 +15,11 @@
 class Figure {
 public:
   // Идентификация, порождение и ввод фигуры из потока
-  static  Figure* In(std::ifstream &ifst);
+  static  Figure* InAny(std::ifstream &ifst);
   // Метод ввода фигуры через параметрическую таблицу
-  void InFP(std::ifstream &ifst);
+  void In(std::ifstream &ifst);
   // Метод вывода фигуры через параметрическую таблицу
-  void OutFP(std::ofstream &ofst);
+  void Out(std::ofstream &ofst);
 
   // Формирование параметрических отношений вместо виртуальных методов
   int specTag; // Признак специализации, доступный из обобщения
