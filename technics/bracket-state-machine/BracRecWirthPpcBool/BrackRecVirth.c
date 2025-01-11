@@ -27,8 +27,9 @@ int erFlag;     // Флаг, фиксирующий наличие ошибок 
 // Символ '\n' является концевым маркером входной строки.
 void GetOneLine(FILE *is, char* str) {
   str[0] = '\0';
-  size_t n = 256;
-  ssize_t len = getline(&str, &n, is);
+  // size_t n = 256;
+  // ssize_t len = getline(&str, &n, is);
+  fgets(str, 256, stdin);
 }
 
 //==============================================================================

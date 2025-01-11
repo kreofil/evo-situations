@@ -37,6 +37,7 @@ void OutEnum<Enum.three* e>() {
 #define set(gen_type, spec_ptr)   init_spec(gen_type, (spec_ptr))
 
 
+
 //------------------------------------------------------------------------------
 int main() {
   struct Enum e0;
