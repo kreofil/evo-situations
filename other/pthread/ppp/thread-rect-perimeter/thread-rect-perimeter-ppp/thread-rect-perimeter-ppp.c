@@ -23,7 +23,7 @@ void RunThread <ThreadData* d>() {} //= 0;
 // POSIX функция, вызвывающая обработчик обобщения
 // подменяемый обработчиком специализации
 void* ThreadFunc(void* d) {
-  RunThread<(ThreadData*) d>();
+  RunThread<(ThreadData*)d>();
   return NULL;
 }
 

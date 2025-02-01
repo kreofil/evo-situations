@@ -15,7 +15,7 @@ static void MultimethodFirstRect<Figure* f2>(Figure.rect* r1, FILE* ofst) {} //=
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для двух прямоугольников
-static void MultimethodFirstRect<Figure.rect* r2>(Figure* r1, FILE* ofst) {
+static void MultimethodFirstRect<Figure.rect* r2>(Figure.rect* r1, FILE* ofst) {
   fprintf(ofst, "Rectangle - Rectangle Combination\n");
 }
 
