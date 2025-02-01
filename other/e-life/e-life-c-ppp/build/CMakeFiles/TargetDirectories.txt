@@ -1,5 +1,0 @@
-/home/al/Projects/git-books/ppp/programs/e-life/e-life-c-ppp/build/CMakeFiles/edit_cache.dir
-/home/al/Projects/git-books/ppp/programs/e-life/e-life-c-ppp/build/CMakeFiles/rebuild_cache.dir
-/home/al/Projects/git-books/ppp/programs/e-life/e-life-c-ppp/build/src/CMakeFiles/e-life.dir
-/home/al/Projects/git-books/ppp/programs/e-life/e-life-c-ppp/build/src/CMakeFiles/edit_cache.dir
-/home/al/Projects/git-books/ppp/programs/e-life/e-life-c-ppp/build/src/CMakeFiles/rebuild_cache.dir
