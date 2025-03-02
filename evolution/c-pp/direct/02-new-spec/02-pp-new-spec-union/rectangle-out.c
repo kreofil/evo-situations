@@ -8,6 +8,6 @@
 
 //------------------------------------------------------------------------------
 // Вывод параметров прямоугольника в форматируемый поток
-void OutRectangle(Rectangle *r, FILE* ofst) {
+void RectangleOut(Rectangle *r, FILE* ofst) {
   fprintf(ofst, "It is Rectangle: x = %d, y = %d\n", r->x, r->y);
 }

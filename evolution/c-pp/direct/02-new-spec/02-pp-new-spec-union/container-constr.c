@@ -9,15 +9,15 @@
 
 //------------------------------------------------------------------------------
 // Инициализация контейнера
-void InitContainer(Container *c) {
+void ContainerInit(Container *c) {
   c->len = 0;
 }
 
 //------------------------------------------------------------------------------
 // Очистка контейнера от элементов (освобождение памяти)
-void ClearContainer(Container *c) {
+void ContainerClear(Container *c) {
   for(int i = 0; i < c->len; i++) {
     free(c->cont[i]);
   }
-  InitContainer(c);
+  ContainerInit(c);
 }

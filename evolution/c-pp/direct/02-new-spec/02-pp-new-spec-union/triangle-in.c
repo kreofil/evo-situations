@@ -8,7 +8,7 @@
 
 //------------------------------------------------------------------------------
 // Ввод параметров треугольника из потока
-void InTriangle(Triangle *t, FILE* ifst) {
+void TriangleIn(Triangle *t, FILE* ifst) {
   // fscanf(ifst, "%d%d%d", &(t->a), &(t->b), &(t->c));
   fscanf(ifst, "%d", &(t->a));
   fscanf(ifst, "%d", &(t->b));

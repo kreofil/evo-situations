@@ -13,7 +13,7 @@ double TrianglePerimeter(Triangle *t);
 double FigurePerimeter<Figure *f>();
 
 //------------------------------------------------------------------------------
-// Периметр прямоугольника как фигуры
+// Периметр треугольника как фигуры
 void FigurePerimeter<Figure.Triangle *f>() {
   TrianglePerimeter(&(f->@));
 }

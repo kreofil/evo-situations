@@ -19,7 +19,7 @@ void DecoratorOut<Decorator.Figure * d>(FILE* ofst) {
     fprintf(ofst, "    Color is %#0.6X\n", d->color);
 }
 //------------------------------------------------------------------------------
-// Ввод фигуры совместно с содержимым декоратора
+// Вывод фигуры совместно с содержимым декоратора
 void FigureOut<Figure.Decorator * d>(FILE* ofst)
 {
     DecoratorOut<&(d->@)>(ofst);

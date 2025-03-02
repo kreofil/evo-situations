@@ -8,7 +8,7 @@
 
 //------------------------------------------------------------------------------
 // Вывод параметров треугольника в поток
-void OutTriangle(Triangle *t, FILE *ofst) {
+void TriangleOut(Triangle *t, FILE *ofst) {
   fprintf(ofst, "It is Triangle: a = %d, b = %d, c = %d\n", t->a, t->b, t->c);
 }
 

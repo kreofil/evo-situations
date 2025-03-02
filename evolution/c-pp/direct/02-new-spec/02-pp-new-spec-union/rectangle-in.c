@@ -8,7 +8,7 @@
 
 //------------------------------------------------------------------------------
 // Ввод параметров прямоугольника из файла
-void InRectangle(Rectangle *r, FILE* ifst) {
+void RectangleIn(Rectangle *r, FILE* ifst) {
   fscanf(ifst, "%d", &(r->x));
   fscanf(ifst, "%d", &(r->y));
 }

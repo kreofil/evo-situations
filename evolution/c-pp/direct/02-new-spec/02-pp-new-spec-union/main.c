@@ -10,11 +10,11 @@
 //------------------------------------------------------------------------------
 // Сигнатуры требуемых функций можно тоже подключить через
 // заголовочный файл. Но, для простоты, можно и так описать.
-void InitContainer(Container* c) ;
-void ClearContainer(Container* c);
+void ContainerInit(Container* c) ;
+void ContainerClear(Container* c);
 
-void InContainer(Container* c, FILE* ifst) ;
-void OutContainer(Container* c, FILE* ofst) ;
+void ContainerIn(Container* c, FILE* ifst) ;
+void ContainerOut(Container* c, FILE* ofst) ;
 
 //------------------------------------------------------------------------------
 int main(int argc, char* argv[]) {
@@ -28,16 +28,16 @@ int main(int argc, char* argv[]) {
   printf("Start\n");
 
   Container c;
-  InitContainer(&c);
-  InContainer(&c, ifst);
+  ContainerInit(&c);
+  ContainerIn(&c, ifst);
   fclose(ifst);
 
   fprintf(ofst, "Filled container.\n");
-  OutContainer(&c, ofst);
+  ContainerOut(&c, ofst);
 
-  ClearContainer(&c);
+  ContainerClear(&c);
   fprintf(ofst, "Empty container.\n");
-  OutContainer(&c, ofst);
+  ContainerOut(&c, ofst);
   fclose(ofst);
 
   printf("Stop\n");

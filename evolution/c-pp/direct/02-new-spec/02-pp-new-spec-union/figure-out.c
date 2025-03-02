@@ -9,23 +9,23 @@
 //------------------------------------------------------------------------------
 // Сигнатуры требуемых функций можно тоже подключить через
 // заголовочный файл. Но, для простоты, можно и так описать.
-void OutRectangle(Rectangle *r, FILE* ofst);
-void OutTriangle(Triangle *t, FILE *ofst);
-void OutCircle(Circle *c, FILE *ofst);
+void RectangleOut(Rectangle *r, FILE* ofst);
+void TriangleOut(Triangle *t, FILE *ofst);
+void CircleOut(Circle *c, FILE *ofst);
 
 //------------------------------------------------------------------------------
 // Вывод параметров текущей фигуры в поток
-void OutFigure(Figure *s, FILE* ofst)
+void FigureOut(Figure *s, FILE* ofst)
 {
   switch(s->k) {
   case RECTANGLE:
-    OutRectangle(&(s->r), ofst);
+    RectangleOut(&(s->r), ofst);
     break;
   case TRIANGLE:
-    OutTriangle(&(s->t), ofst);
+    TriangleOut(&(s->t), ofst);
     break;
   case CIRCLE:
-    OutCircle(&(s->c), ofst);
+    CircleOut(&(s->c), ofst);
     break;
   default:
     fprintf(ofst, "Incorrect figure!\n");

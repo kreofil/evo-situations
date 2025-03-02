@@ -8,7 +8,7 @@
 
 //------------------------------------------------------------------------------
 // Вывод параметров круга в поток
-void OutCircle(Circle *c, FILE *ofst) {
+void CircleOut(Circle *c, FILE *ofst) {
   fprintf(ofst, "It is Circle: r = %d\n", c->r);
 }
 

@@ -8,6 +8,6 @@
 
 //------------------------------------------------------------------------------
 // Ввод параметров круга из потока
-void InCircle(Circle *c, FILE* ifst) {
+void CircleIn(Circle *c, FILE* ifst) {
   fscanf(ifst, "%d", &(c->r));
 }
