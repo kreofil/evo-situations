@@ -16,7 +16,7 @@ class FigureContainer;
 // Является абстрактным, обеспечивая, тем самым, проверку интерфейса
 class Figure {
 public:
-// иденитфикация, порождение и ввод фигуры из потока
+// идентификация, порождение и ввод фигуры из потока
   static  void In(std::ifstream &ifst, FigureContainer* pfc);
   virtual void InData(std::ifstream &ifst) = 0;  // ввод данных из потока
   virtual void Out(std::ofstream &ofst) = 0;     // вывод данных в стандартный поток
