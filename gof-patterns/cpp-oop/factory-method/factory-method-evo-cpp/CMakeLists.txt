@@ -21,7 +21,6 @@ set(SOURCE_FILES
 
     #sources
     main.cpp
-    # input-figures.cpp
 
     simple-rectangle.cpp
     simple-triangle.cpp
