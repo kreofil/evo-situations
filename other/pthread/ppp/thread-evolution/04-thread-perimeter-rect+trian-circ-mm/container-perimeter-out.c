@@ -4,6 +4,8 @@
 //==============================================================================
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include "figure.h"
 #include "container.h"
 #include "ppp-thread.h" // Подключение ПП библиотеки потоков
@@ -27,9 +29,10 @@ struct ThreadData + <FigurePerimeterData;>;
 //------------------------------------------------------------------------------
 // Реализация обработчика специализации, запускаемого в потоке.
 void RunThread<ThreadData.FigurePerimeterData *figurePerimeter>() {
-  printf("The thread %d started\n", figurePerimeter->@iThread);
+  sleep(rand()%3);
+  // printf("The thread %d started\n", figurePerimeter->@iThread);
   figurePerimeter->@p = FigurePerimeter<figurePerimeter->@f>();
-  printf("The thread %d: perimeter = %lf\n",
+  printf("%d: perimeter = %lf\n",
          figurePerimeter->@iThread, figurePerimeter->@p);
 }
 
@@ -56,8 +59,8 @@ double CalcFigurePerimetersInContainer(Container *c) {
     pElement = (perimeterArray+i);
     WaitThread((ThreadData*)(perimeterArray+i));
     perimeterSum += pElement->@p;
-    printf("The thread %d: perimeter = %lf\n",
-          pElement->@iThread, pElement->@p);
+    // printf("The thread %d: perimeter = %lf\n",
+    //       pElement->@iThread, pElement->@p);
   }
   printf("Common Figures Thread Perimenter = %lf\n", perimeterSum);
   return perimeterSum;

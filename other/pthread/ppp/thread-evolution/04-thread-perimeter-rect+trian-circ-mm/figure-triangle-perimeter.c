@@ -13,7 +13,7 @@ double TrianglePerimeter(Triangle *t);
 double FigurePerimeter<Figure *f>();
 
 //------------------------------------------------------------------------------
-// Периметр треугольника как фигуры
+// Периметр прямоугольника как фигуры
 void FigurePerimeter<Figure.trian *f>() {
   TrianglePerimeter(&(f->@));
 }

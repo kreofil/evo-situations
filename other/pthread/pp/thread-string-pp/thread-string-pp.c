@@ -1,4 +1,4 @@
-// gcc ex01.c -lpthread
+// gcc thread-string-pp.c -lpthread
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

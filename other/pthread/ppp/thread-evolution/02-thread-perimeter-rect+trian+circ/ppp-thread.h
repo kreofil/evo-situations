@@ -21,10 +21,6 @@ typedef struct ThreadData {pthread_t threadId;}<> ThreadData;
 // Часто он может бытьтолько один
 void RunThread <ThreadData* d>();
 
-// POSIX функция, вызвывающая обработчик обобщения
-// подменяемый обработчиком специализации
-void* ThreadFunc(void* d);
-
 // Функция создания и запуска потока
 int StartThread(ThreadData* td);
 

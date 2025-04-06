@@ -5,23 +5,17 @@
 #include "container.h"
 
 // Подключение массива в качестве специализации
-Container + <Array;>;
+Container + <vector: Array;>;
 // Подключение кольцевого списка в качестве специализации
-Container + <RingList;>;
-
-typedef struct Int {int x;} Int;
+Container + <rlist: RingList;>;
 
 // Добавление специализации в виде целочисленных значений
-// Value + <int;>;
-Value + <Int;>;
+Value + <int;>;
 
 // Обработчик специализации для целочисленных значений
-void OutValue<Value.Int* value>(FILE* file) {
-  fprintf(file, "value = %d", value->@x);
+void OutValue<Value.int* value>(FILE* file) {
+  fprintf(file, "value = %d", value->@);
 }
-// void OutValue<Value.int* value>(FILE* file) {
-//   fprintf(file, "value = %d", value->@);
-// }
 
 int main(void) {
   //----------------------------------------------------------------------------
@@ -29,20 +23,20 @@ int main(void) {
   //----------------------------------------------------------------------------
 
   // Формирование пустого контейнера
-  struct Container.Array  array;
+  struct Container.vector  array;
   InitContainer<&array>();
   OutContainerValues<&array>(stdout);
   printf("\n");
 
   // Создание нового значения
-  struct Value.Int v1;
-  v1.@x = 10;
+  struct Value.int v1;
+  v1.@ = 10;
   // OutValue<&v1>(stdout);
 
   // Динамическое создание нового элемента
-  struct Value.Int* pvInt;
-  pvInt = create_spec(Value.Int);
-  pvInt->@x = 20;
+  struct Value.int* pvInt;
+  pvInt = create_spec(Value.int);
+  pvInt->@ = 20;
   struct Value* pv = pvInt;
   // OutValue<pv>(stdout);
 
@@ -52,8 +46,8 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec(Value.Int);
-  pvInt->@x = 30;
+  pvInt = create_spec(Value.int);
+  pvInt->@ = 30;
   // OutValue<pvInt>(stdout);
 
   // Добавление элемента в контейнер и вывод контейнера
@@ -62,8 +56,8 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec(Value.Int);
-  pvInt->@x = 40;
+  pvInt = create_spec(Value.int);
+  pvInt->@ = 40;
   // OutValue<pvInt>(stdout);
 
   // Добавление элемента в контейнер и вывод контейнера
@@ -72,8 +66,8 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec(Value.Int);
-  pvInt->@x = v1.@x;
+  pvInt = create_spec(Value.int);
+  pvInt->@ = v1.@;
   // OutValue<pvInt>(stdout);
 
   // Добавление элемента в контейнер и вывод контейнера
@@ -83,7 +77,7 @@ int main(void) {
 
   // Установка итератора на первй элемент и вывод его значения
   First<&array>();
-  printf("First:");
+  printf("First: ");
   pv = CurrentItem<&array>();
   OutValue<pv>(stdout);
   // OutValue< CurrentItem<&array>() >(stdout);
@@ -114,20 +108,20 @@ int main(void) {
   //----------------------------------------------------------------------------
 
   // Формирование пустого контейнера
-  struct Container.RingList  ringList;
+  struct Container.rlist  ringList;
   InitContainer<&ringList>();
   OutContainerValues<&ringList>(stdout);
   printf("\n");
 
   // Создание нового значения
   // struct Value<Int> v1;
-  v1.@x = 110;
+  v1.@ = 110;
   // OutValue<&v1>(stdout);
 
   // Динамическое создание нового элемента
   // struct Value<Int>* pvInt;
-  pvInt = create_spec(Value.Int);
-  pvInt->@x = 220;
+  pvInt = create_spec(Value.int);
+  pvInt->@ = 220;
   pv = pvInt;
   // OutValue<pv>(stdout);
 
@@ -137,8 +131,8 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec(Value.Int);
-  pvInt->@x = 330;
+  pvInt = create_spec(Value.int);
+  pvInt->@ = 330;
   // OutValue<pvInt>(stdout);
 
   // Добавление элемента в контейнер и вывод контейнера
@@ -147,8 +141,8 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec(Value.Int);
-  pvInt->@x = 440;
+  pvInt = create_spec(Value.int);
+  pvInt->@ = 440;
   // OutValue<pvInt>(stdout);
 
   // Добавление элемента в контейнер и вывод контейнера
@@ -157,8 +151,8 @@ int main(void) {
   printf("\n");
 
   // Динамическое создание нового элемента
-  pvInt = create_spec(Value.Int);
-  pvInt->@x = v1.@x;
+  pvInt = create_spec(Value.int);
+  pvInt->@ = v1.@;
   // OutValue<pvInt>(stdout);
 
   // Добавление элемента в контейнер и вывод контейнера
