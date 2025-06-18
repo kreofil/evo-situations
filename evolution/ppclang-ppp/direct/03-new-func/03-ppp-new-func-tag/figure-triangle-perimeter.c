@@ -14,6 +14,7 @@ double FigurePerimeter<Figure *f>();
 
 //------------------------------------------------------------------------------
 // Периметр прямоугольника как фигуры
-void FigurePerimeter<Figure.trian *f>() {
-  TrianglePerimeter(&(f->@));
+double FigurePerimeter<Figure.trian *f>() {
+  return TrianglePerimeter(&(f->@));
+  // return (double)(f->@a + f->@b + f->@c);
 }

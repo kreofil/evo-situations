@@ -16,12 +16,12 @@ Figure* FigureCreateUseTag<EnumFig *pEnumFig>(int k);
 //------------------------------------------------------------------------------
 // Ввод параметров одной из фигур из файла
 Figure* FigureCreateAndIn(FILE* ifst) {
-  // int figSpecSize = get_spec_size(Figure);
+  int figSpecSize = get_spec_size(Figure);
   // printf("figSpecSize = %d\n", figSpecSize);
   Figure *sp;
   int k = 0;
   fscanf(ifst, "%d", &(k));
-  for(int i = 1; i <= get_spec_size(EnumFig); i++) {
+  for(int i = 1; i <= figSpecSize; i++) {
     Figure* pFig = get_spec_ptr(EnumFig, i);
     sp = FigureCreateUseTag<pFig>(k);
     if(sp != NULL) break;

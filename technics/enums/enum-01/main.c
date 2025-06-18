@@ -61,5 +61,25 @@ int main() {
   init_spec(Enum.two, &e0);
   OutEnum<&e0>();
 
+  // Наверно имеет смысл сделать так, чтобы эти варианты тоже работали
+  // То есть, чтобы можно было и нулевую специализацию использовать в общем случае
+  // даже если она имеет другие размеры.
+
+  // init_spec(Enum, &e0);
+  // OutEnum<&e0>();
+
+  // init_spec(Enum.void, &e0);
+  // OutEnum<&e0>();
+
+  Enum* pe0 = create_spec(Enum);
+  OutEnum<pe0>();
+
+  init_spec(Enum.three, pe0);
+  OutEnum<pe0>();
+
+  // init_spec(Enum, pe0);
+  // OutEnum<pe0>();
+  free(pe0);
+
   return 0;
 }

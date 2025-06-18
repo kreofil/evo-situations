@@ -14,6 +14,7 @@ set(SOURCE_FILES
     word32-spec.h
 
     #sources
+    word32.c
     word32-spec.c
 
     main.c
