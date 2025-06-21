@@ -6,6 +6,17 @@ typedef struct Strategy {}<> Strategy;
 // Обобщающая функция, определяющая общую сигнатуру для алгоритмов
 void Action<Strategy* s>(char* name, int age) = 0;
 
+// Конкретные стратегии задаются перечислимыми типом
+Strategy + <NameAge: void;>;
+Strategy + <AgeName: void;>;
+// Обработчики специализаций, определяемые конкрентным стратегиями.
+void Action<Strategy.NameAge* s>(char* name, int age) {
+  printf("Name is %s, age = %d", name, age);
+}
+void Action<Strategy.AgeName* s>(char* name, int age) {
+  printf("Age = %d, name is %s", age, name);
+}
+
 // Обобщенное животное
 typedef struct Animal {
   Strategy* strategy;
@@ -24,10 +35,10 @@ void SetStrategy(Animal* a, Strategy* s) {a->strategy = s;}
 // Использование стратегии животным
 void UseStrategy(Animal* a) {
   GetInfo<a>();
-  // if(a->strategy != NULL) {
+  if(a->strategy != NULL) {
     printf(". ");
     Action<a->strategy>(a->name, a-> age);
-  // }
+  }
   printf("\n");
 }
 
@@ -46,17 +57,6 @@ Animal + <Dog;>;
 void GetInfo<Animal.Dog* a>() {
   printf("I am the Dog");
 };
-
-// Конкретные стратегии задаются перечислимыми типом
-Strategy + <NameAge: void;>;
-Strategy + <AgeName: void;>;
-// Обработчики специализаций, определяемые конкрентным стратегиями.
-void Action<Strategy.NameAge* s>(char* name, int age) {
-  printf("Name is %s, age = %d", name, age);
-}
-void Action<Strategy.AgeName* s>(char* name, int age) {
-  printf("Age = %d, name is %s", age, name);
-}
 
 // Клиент запускает сформированных животных
 void ClientCode(Animal* a) {

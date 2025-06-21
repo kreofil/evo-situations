@@ -9,7 +9,32 @@ public:
   Strategy(): nextStrategy{nullptr} {}
   void SetStrategy(Strategy* s) {nextStrategy = s;}
   virtual ~Strategy() {}
-  virtual void Action(std::string& name, int age) = 0;
+  virtual void Action(std::string& name, int age) {
+    if(nextStrategy != nullptr) {
+      std::cout << "\n    ";
+      nextStrategy->Action(name, age);
+    }
+  }
+};
+
+// Конкретная стратегия, осуществляющая вывод в начале имени, а затем возраста
+class NameAgeStrategy : public Strategy {
+public:
+  void Action(std::string& name, int age) {
+    std::cout << "Name is " << name << ", age = " << age;
+    // Необязательное действие, если алгоритму не нужно
+    Strategy::Action(name, age);
+  }
+};
+
+// Конкретная стратегия, осуществляющая вывод в начале возраста, а затем имени
+class AgeNameStrategy : public Strategy {
+public:
+  void Action(std::string& name, int age) {
+    std::cout << "Age = " << age << ", name is " << name;
+    // Необязательное действие, если алгоритму не нужно
+    Strategy::Action(name, age);
+  }
 };
 
 // Обобщенное животное, определяемое в базовом классе.
@@ -50,32 +75,6 @@ public:
   }
 };
 
-// Конкретная стратегия, осуществляющая вывод в начале имени, а затем возраста
-class NameAgeStrategy : public Strategy {
-public:
-  void Action(std::string& name, int age) {
-    std::cout << "Name is " << name << ", age = " << age;
-    // Необязательное действие, если алгоритму не нужно
-    if(nextStrategy != nullptr) {
-      std::cout << "\n    ";
-      nextStrategy->Action(name, age);
-    }
-  }
-};
-
-// Конкретная стратегия, осуществляющая вывод в начале возраста, а затем имени
-class AgeNameStrategy : public Strategy {
-public:
-  void Action(std::string& name, int age) {
-    std::cout << "Age = " << age << ", name is " << name;
-    // Необязательное действие, если алгоритму не нужно
-    if(nextStrategy != nullptr) {
-      std::cout << "\n    ";
-      nextStrategy->Action(name, age);
-    }
-  }
-};
-
 // Клиент запускает стратегию, подключенную к животному
 void ClientCode(Animal* a) {
   a->UseStrategy();
@@ -97,11 +96,12 @@ int main() {
   dog.SetStrategy(&ans);
   ClientCode(&dog);
 
-  duck.SetStrategy(&nas);
+  Duck newDuck("Black Cape", 4);
+  newDuck.SetStrategy(&nas);
   nas.SetStrategy(&ans);
-  ClientCode(&duck);
-  duck.SetStrategy(&ans);
-  ClientCode(&duck);
+  ClientCode(&newDuck);
+  newDuck.SetStrategy(&ans);
+  ClientCode(&newDuck);
 
 
   return 0;

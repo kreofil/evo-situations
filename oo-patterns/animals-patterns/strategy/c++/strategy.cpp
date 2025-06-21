@@ -8,6 +8,22 @@ public:
   virtual void Action(std::string& name, int age) = 0;
 };
 
+// Конкретная стратегия, осуществляющая вывод в начале имени, а затем возраста
+class NameAgeStrategy : public Strategy {
+public:
+  void Action(std::string& name, int age) {
+    std::cout << "Name is " << name << ", age = " << age;
+  }
+};
+
+// Конкретная стратегия, осуществляющая вывод в начале возраста, а затем имени
+class AgeNameStrategy : public Strategy {
+public:
+  void Action(std::string& name, int age) {
+    std::cout << "Age = " << age << ", name is " << name;
+  }
+};
+
 // Обобщенное животное, определяемое в базовом классе.
 // Также используется для обобщение декораторов.
 class Animal {
@@ -43,22 +59,6 @@ public:
   Dog(std::string n, int a): Animal{n, a} {}
   void GetInfo() const override {
     std::cout << "I am the Dog";
-  }
-};
-
-// Конкретная стратегия, осуществляющая вывод в начале имени, а затем возраста
-class NameAgeStrategy : public Strategy {
-public:
-  void Action(std::string& name, int age) {
-    std::cout << "Name is " << name << ", age = " << age;
-  }
-};
-
-// Конкретная стратегия, осуществляющая вывод в начале возраста, а затем имени
-class AgeNameStrategy : public Strategy {
-public:
-  void Action(std::string& name, int age) {
-    std::cout << "Age = " << age << ", name is " << name;
   }
 };
 
