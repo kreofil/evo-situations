@@ -10,11 +10,11 @@ The [evolution](evolution) directory contains examples demonstrating the possibi
 
 They are considered as options that provide direct extension using the techniques that this or that paradigm provides. In this situation, where direct solutions do not provide evolutionary extension, an extension with changes is implemented.
 
-In addition, examples are located separately in which, due to additional code, an attempt is made to implement an evolutionary extension of previously written code.
+In addition, examples are located separately in which, due to additional code, an attempt is made to implement an evolutionary extension of previously written code. A more detailed description of the catalog is provided in the [accompanying description](evolution/readme.md).
 
-## gof-patterns
+## oo-patterns
 
-Programs implementing OO design patterns discussed in the Gang of Four (GoF) book. Implemented in C++ and using the PP approach. The main idea is to show that the PP paradigm provides equivalent solutions. Often these solutions are more diverse and effective.
+Programs that implement the OO design patterns discussed in the book the Gang of Four (GoF). They are located in the [oo-patterns](oo-patterns) directory. A more detailed description of the catalog is provided in the [accompanying description](oo-patterns/readme.md). The OO versions of the patterns are implemented in C++. PP pattern simulation is performed on PPC. The main idea is to show that the PP paradigm provides equivalent solutions. These solutions are often more diverse and effective.
 
 ## other
 
