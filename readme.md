@@ -30,5 +30,9 @@ Basic techniques of procedural-parametric programming in comparison with techniq
 
 Alternative approaches include: OOP (C++), Pure procedural approach, Go and Rust language capabilities.
 
+## container
+
+The catalog is planned to include containers similar in functionality to C++ container classes. The absence of templates in the C language prevents the full capabilities of C++ from being covered. However, procedural-parametric polymorphism allows for the creation of containers with similar value type substitution. Currently, an equivalent of the std::vector class has been implemented.
+
 ## tmp
 The catalog contains raw and unfinished programs. It also contains templates for creating catalogs and old programs that can be modified for placement in various thematic catalogs.
