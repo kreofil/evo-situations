@@ -17,7 +17,7 @@ void FigureIn<Figure *f>(FILE* file);
 Figure* FigureCreateAndIn(FILE* ifst) {
   Figure *sp;
   int k = 0;
-  fscanf(ifst, "%d", &(k));
+  fscanf(ifst, "%d", &k);
   switch(k) {
   case 1:
     sp = create_spec(Figure.rect);

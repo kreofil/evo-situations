@@ -20,8 +20,8 @@ Figure* FigureCreateAndIn(FILE* ifst) {
   // printf("figSpecSize = %d\n", figSpecSize);
   Figure *sp;
   int k = 0;
-  fscanf(ifst, "%d", &(k));
-  for(int i = 1; i <= figSpecSize; i++) {
+  fscanf(ifst, "%d", &k);
+  for(int i = 1; i < figSpecSize; i++) {
     Figure* pFig = get_spec_ptr(EnumFig, i);
     sp = FigureCreateUseTag<pFig>(k);
     if(sp != NULL) break;

@@ -18,7 +18,9 @@ include_directories(BEFORE
 )
 link_directories(./lib)
 
-add_subdirectory(src/pp-vector)
-add_subdirectory(src/tests/pp-vector-common)
-add_subdirectory(src/examples/pp-vector-sum-int)
-add_subdirectory(src/examples/pp-vector-sum-double)
+add_subdirectory(src/ppvector)
+add_subdirectory(tests/ppvector-common)
+add_subdirectory(examples/ppvector-sum-int)
+add_subdirectory(examples/ppvector-sum-double)
+add_subdirectory(examples/ppvector-sum-int-ptr)
+add_subdirectory(examples/ppvector-figures)
