@@ -14,4 +14,8 @@ void ppVector_element_print<ppVector* v>(FILE* f);
 // Использует полиморфную функцию вывода отдельного элемента
 void ppVector_print(FILE* f, ppVector* v);
 
+// Функция, осуществляющая сортировку элементов вектора.
+// Операция сортировки задается непосредственно для каждой специализации.
+void ppVector_sort<ppVector* v>();
+
 #endif // __ppvector_general__

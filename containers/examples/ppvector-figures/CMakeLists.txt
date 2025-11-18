@@ -16,10 +16,15 @@ set(SOURCE_FILES
 
     #sources
     figure-out.c
+    figure-perimeter.c
     figure-rectangle-out.c
+    figure-rectangle-perimeter.c
     figure-triangle-out.c
     rectangle-out.c
+    rectangle-perimeter.c
+    figure-triangle-perimeter.c
     triangle-out.c
+    triangle-perimeter.c
 
     ppvector-figures.c
 )

@@ -1,4 +1,4 @@
-// pp-vector-sum.c - тестирование ppVector
+#include <stdlib.h>
 #include <stdio.h>
 #include "ppvector.h"
 
@@ -15,6 +15,8 @@ void ppVector_element_print<ppVector.int_ptr* v>(FILE* f) {//, int index) {
   fprintf(f, "%d\n", *(v->@));
 }
 
+//------------------------------------------------------------------------------
+// Суммирование элементов целочисленного вектора
 int ppVecor_sum(struct ppVector.int_ptr* pv_int) {
   // Суммирование элементов вектора
   int sum = 0;
@@ -23,6 +25,26 @@ int ppVecor_sum(struct ppVector.int_ptr* pv_int) {
     sum += *(pv_int->@);
   }
   return sum;
+}
+
+//------------------------------------------------------------------------------
+// Функция, используемая для сравнения целочисленных элементов
+int cmp_int_ptr(const void *a, const void *b) {
+  int* a1 = *(int**)a;
+  int* a2 = *(int**)b;
+  return *a1 - *a2;
+}
+
+//------------------------------------------------------------------------------
+// Обработчик специализации, осуществляющий обработку целочисленного вектора
+// void qsort(size_t n, size_t size;
+//             void base[n * size], size_t n, size_t size,
+//             typeof(int (const void [size], const void [size]))
+//             *compar);
+void ppVector_sort<ppVector.int_ptr* v>()  {
+  // Получение указателя на массив указателей на целые чисел
+  void* v_ptr = ppVector_data((ppVector*)v);
+  qsort(v_ptr, ppVector_size((ppVector*)v), sizeof(int*), cmp_int_ptr);
 }
 
 //==============================================================================
@@ -43,6 +65,11 @@ int main(void) {
   ppVector_print(stdout, (ppVector*)&v_int);
 
   printf("sum = %d\n", ppVecor_sum(&v_int));
+
+  // Вызов функции сортировки
+  ppVector_sort<(ppVector*)&v_int>();
+  // Тестовый вывод отсортированного вектора
+  ppVector_print(stdout, (ppVector*)&v_int);
 
   ppVector_destroy((ppVector*)&v_int);
   // Отсутствует возможность прямого использования указателя на специализацию
