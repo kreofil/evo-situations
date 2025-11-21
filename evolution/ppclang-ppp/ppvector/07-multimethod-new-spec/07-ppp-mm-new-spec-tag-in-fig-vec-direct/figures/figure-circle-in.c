@@ -21,7 +21,7 @@ void FigureIn<Figure.circ *f>(FILE* ifst) {
 
 //------------------------------------------------------------------------------
 // Создание круга как фигуры клонированием
-Figure* FigureCreateUseTag<Figure.circ *pFig>(int k) {
+Figure* FigureCreateUseInputTag<Input.circ *pFig>(int k) {
   if(k == 3) {
     // printf("k = %d: It is Circle\n", k);
     return create_spec(Figure.circ);

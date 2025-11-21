@@ -54,27 +54,21 @@ Figure* CreateDecoratedFigure<Color.trian* f>(int k) {
 }
 
 //------------------------------------------------------------------------------
-// Запуск проверки декоратора и создание соответствующей фигуры
-// Единственное узкое место, так как добавление еще одной фигуры приведет
-// к изменению кода из-за признака. Проблема в том, что цвет распространяется
-// на разные фигуры, что затрудняет распределение входных значений.
-Figure* FigureCreateUseTag<Figure.color *pFig>(int k) {
+// Создание цветного прямоугольника по признаку из файла
+Figure* FigureCreateUseInputTag<Input.color_rect *pFig>(int k) {
     if(k == 11) {
         return create_spec(Figure.color.rect);
-    } else if(k == 12) {
-        return create_spec(Figure.color.trian);
     } else {
         return NULL;
     }
 }
 
 //------------------------------------------------------------------------------
-// Создание декоратора-треугольника как фигуры клонированием
-// Figure* FigureCreateUseTag<Figure.decor *pFig>(int k) {
-//     if(k == 12) {
-//         // printf("k = %d: It is Color-triangle\n", k);
-//         return create_spec(Figure.decor.Figure.trian);
-//     } else {
-//         return NULL;
-//     }
-// }
+// Создание цветного треугольника по признаку из файла
+Figure* FigureCreateUseInputTag<Input.color_trian *pFig>(int k) {
+    if(k == 12) {
+        return create_spec(Figure.color.trian);
+    } else {
+        return NULL;
+    }
+}

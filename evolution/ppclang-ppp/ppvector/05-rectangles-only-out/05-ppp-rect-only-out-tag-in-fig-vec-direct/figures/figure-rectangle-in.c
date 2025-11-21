@@ -23,7 +23,7 @@ void FigureIn<Figure.rect *f>(FILE* ifst) {
 
 //------------------------------------------------------------------------------
 // Создание прямоугольника как фигуры клонированием
-Figure* FigureCreateUseTag<Figure.rect *pFig>(int k) {
+Figure* FigureCreateUseInputTag<Input.rect *pFig>(int k) {
   if(k == 1) {
     // printf("k = %d: It is Rectangle\n", k);
     return create_spec(Figure.rect);

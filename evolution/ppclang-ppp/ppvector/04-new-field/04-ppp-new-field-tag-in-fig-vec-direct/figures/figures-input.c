@@ -9,19 +9,19 @@
 #include "figure.h"
 
 void FigureIn<Figure *f>(FILE* file);
-Figure* FigureCreateUseTag<Figure *pFig>(int k);
+Figure* FigureCreateUseInputTag<Input *pFig>(int k);
 
 //------------------------------------------------------------------------------
 // Ввод параметров одной из фигур из файла
 Figure* FigureCreateAndIn(FILE* ifst) {
-  int figSpecSize = get_spec_size(Figure);
-  // printf("figSpecSize = %d\n", figSpecSize);
+  int inSpecSize = get_spec_size(Input);
+  // printf("inSpecSize = %d\n", inSpecSize);
   Figure *sp;
   int k = 0;
   fscanf(ifst, "%d", &(k));
-  for(int i = 1; i < figSpecSize; i++) {
-    Figure* pFig = get_spec_ptr(Figure, i);
-    sp = FigureCreateUseTag<pFig>(k);
+  for(int i = 1; i < inSpecSize; i++) {
+    Input* pIn = get_spec_ptr(Input, i);
+    sp = FigureCreateUseInputTag<pIn>(k);
     if(sp != NULL) break;
   }
   if(sp == NULL) {

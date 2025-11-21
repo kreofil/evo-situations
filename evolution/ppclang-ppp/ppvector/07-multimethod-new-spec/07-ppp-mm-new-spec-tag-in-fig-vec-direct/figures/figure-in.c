@@ -15,7 +15,7 @@ void FigureIn<Figure *f>(FILE* file) {}//= 0;
 //------------------------------------------------------------------------------
 // Обобщающая функция, которая по указателю на специализацию
 // и значению из файла создает специализированную фигуру
-Figure* FigureCreateUseTag<Figure *pFig>(int k) {
+Figure* FigureCreateUseInputTag<Input *pFig>(int k) {
   printf("Unnown figure type for k = %d\n", k);
   exit(13);
 }

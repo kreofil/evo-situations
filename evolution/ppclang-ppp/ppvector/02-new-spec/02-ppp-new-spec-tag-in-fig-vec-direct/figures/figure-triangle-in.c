@@ -23,7 +23,7 @@ void FigureIn<Figure.trian *f>(FILE* ifst) {
 
 //------------------------------------------------------------------------------
 // Создание треугольника как фигуры клонированием
-Figure* FigureCreateUseTag<Figure.trian *pFig>(int k) {
+Figure* FigureCreateUseInputTag<Input.trian *pFig>(int k) {
   if(k == 2) {
     // printf("k = %d: It is Triangle\n", k);
     return create_spec(Figure.trian);

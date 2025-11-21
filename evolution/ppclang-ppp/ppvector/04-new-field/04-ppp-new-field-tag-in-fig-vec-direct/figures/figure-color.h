@@ -22,4 +22,11 @@ Figure + < color: Color; > ;
 Color + <rect: Rectangle;>;
 Color + <trian: Triangle;>;
 
+//------------------------------------------------------------------------------
+// Ввод цветного прямоугольника из файла
+Input + <color_rect: void;>;
+// Ввод цветного треугольника из файла
+Input + <color_trian: void;>;
+
+
 #endif // __figure_color__
