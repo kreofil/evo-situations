@@ -3,72 +3,7 @@
 #include <error.h>
 #include <stdlib.h>
 #include "eworld.h"
-// #include "map.h"
-
-//------------------------------------------------------------------------------
-// Вывод текущего состояния карты на дисплей
-void DrawMap(Map* map) {
-    // Эталон для проверки занятой клетки
-    struct Cell.filled filledCell;
-    // Эталон для проверки свободной клетки
-    struct Cell.empty emptyCell;
-    // Эталон для проверки граничной клетки
-    struct Cell.locked lockedCell;
-
-    // Формирование строки для вывода карты
-    for(int i = 0; i < map->height; ++i) {
-        for(int j = 0; j < map->width; ++j) {
-            Cell* pCell = &(map->plane[i][j]);
-            if(spec_index_cmp(pCell, &emptyCell) >= 0) {
-                printf(" ");
-            } else if(spec_index_cmp(pCell, &lockedCell) >= 0) {
-                // printf("#");
-                printf("\x1b[1;30m#\x1b[0m");
-            } else if(spec_index_cmp(pCell, &filledCell) >= 0) {
-                // printf("O");
-                printf("\x1b[1;32mO\x1b[0m");
-                // printf("\x1b[1;31mO\x1b[0m");
-            } else {
-                printf("?");
-            }
-        }
-        printf("\n");
-    }
-}
-
-//------------------------------------------------------------------------------
-// Тестовый вывод информации о текущем состоянии карты
-void MapTestOut(Map* map) {
-    // Формирование информации о размере карты
-    printf("Map parameters:\n");
-    printf("    - height = %d;\n", map->height);
-    printf("    - width  = %d;\n", map->width);
-    DrawMap(map);
-}
-
-//------------------------------------------------------------------------------
-// Фиксация ячейки на карте
-void SetCellOnTheMap(Map* map, int i, int j, Cell cell) {
-    map->plane[i][j] = cell;
-}
-
-//------------------------------------------------------------------------------
-// Проверка окрестных клеток на число живых
-int LivingCells(Map* map, int i, int j) {
-    int count = 0;
-    for(int k = i-1; k < i+2; ++k) {
-        for(int l = j-1; l < j+2; ++l) {
-            // Эталон для проверки занятой клетки
-            struct Cell.filled filledCell;
-            Cell* pCell = &(map->plane[k][l]);
-            if(spec_index_cmp(pCell, &filledCell) >= 0) {
-                // if(map->plane[k][l]==filled) {
-                ++count;
-            }
-        }
-    }
-    return count;
-}
+#include "map.h"
 
 //------------------------------------------------------------------------------
 // Загрузка начальных параметров жизни из текстового образа
@@ -103,26 +38,25 @@ void DrawTextMap(EWorld* eWorld) {
 // и заполняется список сущностей
 void CreateMap(EWorld* eWorld) {
     eWorld->cells = 0;  // Считаем живые клетки в начальном состоянии
-    int width = strlen(eWorld->textMap[0]);
+    int width = strlen(eWorld->textMap[0])-1;
     // Перебор строк формирующих карту
     for(int i = 0; i < eWorld->mapLines; ++i) {
         // Проверка корректности карты (все строки д.б. одинаковой ширины)
-        int nextWidth = strlen(eWorld->textMap[i]);
+        int nextWidth = strlen(eWorld->textMap[i])-1;
         // printf("width = %d, nextWidth = %d\n", width, nextWidth);
         // if(width != nextWidth) {
         //     perror("Incorrect map file");
         //     exit(1);
         // }
         char ch;   // Текущий символ общего перебора
-        for(int j = 0; j < width-1; ++j) {
+        for(int j = 0; j < width; ++j) {
             ch = eWorld->textMap[i][j];
-            // Cell* pCell = &((eWorld->map01).plane[i][j]);
             switch (ch) {
             case ' ':
                 init_spec(Cell.empty, &((eWorld->map01).plane[i][j]));
                 break;
             case '#':
-                init_spec(Cell.locked, &((eWorld->map01).plane[i][j]));
+                init_spec(Cell.empty, &((eWorld->map01).plane[i][j]));
                 break;
             case '*':
                 init_spec(Cell.filled, &((eWorld->map01).plane[i][j]));
@@ -192,8 +126,8 @@ void NewStateOfCell(EWorld* eWorld, int i, int j) {
 void LifeNextState(EWorld* eWorld) {
     ++eWorld->step;
     // Формирование следующего состояния на другом поле
-    for(int i = 1; i < (eWorld->currentMap->height)-1; ++i) {
-        for(int j = 1; j < (eWorld->currentMap->width)-1; ++j) {
+    for(int i = 0; i < (eWorld->currentMap->height); ++i) {
+        for(int j = 0; j < (eWorld->currentMap->width); ++j) {
             NewStateOfCell(eWorld, i, j);
         }
     }

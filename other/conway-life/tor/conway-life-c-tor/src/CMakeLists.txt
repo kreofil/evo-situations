@@ -9,12 +9,12 @@ set(CMAKE_BUILD_TYPE Debug)
 set(SOURCE_FILES
     # headers
     eworld.h
-    # map.h
+    map.h
 
     #sources
     main.c
     eworld.c
-    # map.c
+    map.c
     )
 
 add_executable(conway-life ${SOURCE_FILES})
