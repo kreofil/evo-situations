@@ -1,0 +1,25 @@
+# C++, C, PPC  multimethod-2 (rectangle + triangle + circle)
+
+## C++
+
+Delta time = 4.95742
+Delta time = 5.03075
+Delta time = 4.99905
+Delta time = 4.88782
+Delta time = 5.04299
+
+## PPC
+
+Delta time = 3.976716
+Delta time = 4.010923
+Delta time = 4.093187
+Delta time = 3.965833
+Delta time = 4.002368
+
+## C
+
+Delta time = 5.130660
+Delta time = 5.166856
+Delta time = 5.155987
+Delta time = 5.157073
+Delta time = 5.094940
