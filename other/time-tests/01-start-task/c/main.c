@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
 
   // Тестовый фрагмент для вычисления скорости вычисления периметра.
   clock_t startTime = clock();
-  for(int i = 0; i < 10000000; ++i) {
+  for(int i = 0; i < 100000000; ++i) {
     ContainerPerimeter(&c);
   }
   clock_t endTime = clock();

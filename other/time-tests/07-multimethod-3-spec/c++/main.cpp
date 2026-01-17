@@ -28,12 +28,14 @@ int main(int argc, char* argv[]) {
   c.MultimethodOut(ofst);
 
   // Тестовый фрагмент для вычисления скорости вычисления периметра.
+  double p = 0.0;
   clock_t startTime = clock();
-  for(int i = 0; i < 3000000; ++i) {
+  for(int i = 0; i < 10000000; ++i) {
     c.MultimethodPerimeter();
   }
   clock_t endTime = clock();
 
+  std::cout << "p = " << p << "\n";
   c.Clear();
   ofst << "Empty container.\n";
   c.Out(ofst);

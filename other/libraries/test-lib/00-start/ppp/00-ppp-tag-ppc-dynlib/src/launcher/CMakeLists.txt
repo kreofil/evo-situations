@@ -8,11 +8,17 @@ set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type is Debug" FORCE)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")
 
 add_executable(test-stat-lib main.c)
+add_executable(test-shared-lib main.c)
 
 # Линковка программы с библиотекой body
 target_link_libraries(test-stat-lib
   -Wl,--whole-archive
-  body
+  body-static
   -Wl,--no-whole-archive
 )
 
+target_link_libraries(test-shared-lib
+  -Wl,--whole-archive
+  body-shared
+  -Wl,--no-whole-archive
+)

@@ -32,5 +32,5 @@ set(SOURCE_LIB
 set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type is Debug" FORCE)
 
 # Включение экспорта всех символов для создания динамической библиотеки
-add_library(body STATIC ${SOURCE_LIB})   # Создание динамической библиотеки
-# add_library(body SHARED ${SOURCE_LIB})   # Создание динамической библиотеки
+add_library(body-static STATIC ${SOURCE_LIB})   # Создание статической библиотеки
+add_library(body-shared SHARED ${SOURCE_LIB})   # Создание динамической библиотеки
