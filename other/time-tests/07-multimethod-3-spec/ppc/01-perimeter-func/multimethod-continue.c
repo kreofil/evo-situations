@@ -54,30 +54,30 @@ void Multimethod<Figure.circ* c1, Figure.circ* c2>(FILE* ofst) {
 //------------------------------------------------------------------------------
 // Обработчик специализации для прямоугольника и круга
 double MultimethodPerimeter<Figure.rect* r1, Figure.circ* c2>() {
-  return RectanglePerimeter(&(r1->@)) * CirclePerimeter(&(c2->@));
+  return (RectanglePerimeter(&(r1->@)) - CirclePerimeter(&(c2->@))) * 10.0;
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для треугольника и круга
 double MultimethodPerimeter<Figure.trian* t1, Figure.circ* c2>() {
-  return TrianglePerimeter(&(t1->@)) * CirclePerimeter(&(c2->@));
+  return TrianglePerimeter(&(t1->@)) * CirclePerimeter(&(c2->@)) / 3.0;
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для круга и прямоугольника
 double MultimethodPerimeter<Figure.circ* c1, Figure.rect* r2>() {
-  return CirclePerimeter(&(c1->@)) * RectanglePerimeter(&(r2->@));
+  return (CirclePerimeter(&(c1->@)) + RectanglePerimeter(&(r2->@))) / 5.0;
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для круга и треугольника
 double MultimethodPerimeter<Figure.circ* c1, Figure.trian* t2>() {
-  return CirclePerimeter(&(c1->@)) * TrianglePerimeter(&(t2->@));
+  return CirclePerimeter(&(c1->@)) - TrianglePerimeter(&(t2->@)) * 7.0;
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для двух кругов
 double MultimethodPerimeter<Figure.circ* c1, Figure.circ* c2>() {
-  return CirclePerimeter(&(c1->@)) * CirclePerimeter(&(c2->@));
+  return CirclePerimeter(&(c1->@)) * CirclePerimeter(&(c2->@)) / 13.0;
 }
 

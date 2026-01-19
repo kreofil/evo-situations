@@ -110,19 +110,19 @@ func (r2 *Rectangle) RectangleContinuePerimeter(r1 *Rectangle) float64 {
 // Продолжение диспетчеризации, когда после прямоугольника
 // идет треугольник
 func (t2 *Triangle) RectangleContinuePerimeter(r1 *Rectangle) float64 {
-  return r1.Perimeter() * t2.Perimeter();
+  return r1.Perimeter() + t2.Perimeter();
 }
 
 //-------------------------------------------------
 // Продолжение диспетчеризации, когда после треугольника
 // идет прямоугольник
 func (r2 *Rectangle) TriangleContinuePerimeter(t1 *Triangle) float64 {
-  return t1.Perimeter() * r2.Perimeter();
+  return t1.Perimeter() / r2.Perimeter();
 }
 
 //-------------------------------------------------
 // Продолжение диспетчеризации, когда после треугольника
 // идет треугольник
 func (t2 *Triangle) TriangleContinuePerimeter(t1 *Triangle) float64 {
-  return t1.Perimeter() * t2.Perimeter();
+  return t1.Perimeter() * t2.Perimeter() * 2.0;
 }

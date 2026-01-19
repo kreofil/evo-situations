@@ -62,13 +62,12 @@ func main() {
     fmt.Println("Common perimeter = ", c.OnlyPerimeter())
 
     // Тестовый фрагмент для вычисления скорости вычисления периметра.
-    var startTime = time.Now()
     var p float64
-    for i := 0; i < 10000000; i++ {
+    var startTime = time.Now()
+    for i := 0; i < 5000000; i++ {
       p = c.ContainerMultimethodPerimeter();
     }
     var endTime = time.Now()
-
     fmt.Println("p = ", p)
 
     c.Clear();

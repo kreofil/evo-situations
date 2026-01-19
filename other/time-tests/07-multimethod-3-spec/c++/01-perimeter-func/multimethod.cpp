@@ -55,7 +55,7 @@ double Rectangle::FirstRectanglePerimeter(Rectangle& rect) {
 
 // Обработчик треугольника и прямоугольника
 double Rectangle::FirstTrianglePerimeter(Triangle& trian) {
-  return trian.Perimeter() * Perimeter();
+  return trian.Perimeter() / Perimeter();
 }
 
 //------------------------------------------------------------------------------
@@ -66,10 +66,10 @@ double Triangle::MultimethodPerimeter(Figure& fig2) {
 
 // Обработчик прямоугольника и треугольника
 double Triangle::FirstRectanglePerimeter(Rectangle& rect) {
-  return rect.Perimeter() * Perimeter();
+  return rect.Perimeter() + Perimeter();
 }
 
 // Обработчик двух треугольников
 double Triangle::FirstTrianglePerimeter(Triangle& trian) {
-  return trian.Perimeter() * Perimeter();
+  return trian.Perimeter() * Perimeter() * 2.0;
 }

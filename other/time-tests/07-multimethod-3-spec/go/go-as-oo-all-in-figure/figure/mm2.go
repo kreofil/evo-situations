@@ -106,29 +106,29 @@ func (c1 *Circle)MMP(f2 Figure) float64 {
 //-------------------------------------------------
 // Продолжение диспетчеризации, когда после прямоугольника идет круг
 func (c2 *Circle) RectangleContinuePerimeter(r1 *Rectangle) float64 {
-  return r1.Perimeter() * c2.Perimeter();
+  return (r1.Perimeter() - c2.Perimeter()) * 10.0;
 }
 
 //-------------------------------------------------
 // Продолжение диспетчеризации, когда после треугольника идет круг
 func (c2 *Circle) TriangleContinuePerimeter(t1 *Triangle) float64 {
-  return t1.Perimeter() * c2.Perimeter();
+  return t1.Perimeter() * c2.Perimeter() / 3.0;
 }
 
 //-------------------------------------------------
 // Продолжение диспетчеризации, когда после круга идет прямоугольник
 func (r2 *Rectangle) CircleContinuePerimeter(c1 *Circle) float64 {
-  return c1.Perimeter() * r2.Perimeter();
+  return (c1.Perimeter() + r2.Perimeter()) / 5.0;
 }
 
 //-------------------------------------------------
 // Продолжение диспетчеризации, когда после круга идет треугольник
 func (t2 *Triangle) CircleContinuePerimeter(c1 *Circle) float64 {
-  return c1.Perimeter() * t2.Perimeter();
+  return c1.Perimeter() - t2.Perimeter() * 7.0;
 }
 
 //-------------------------------------------------
 // Продолжение диспетчеризации, когда после круга идет круг
 func (c2 *Circle) CircleContinuePerimeter(c1 *Circle) float64 {
-  return c1.Perimeter() * c2.Perimeter();
+  return c1.Perimeter() * c2.Perimeter() / 13.0;
 }

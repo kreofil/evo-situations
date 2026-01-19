@@ -50,19 +50,19 @@ int main(int argc, char* argv[]) {
   ContainerPerimeterOut(&c, ofst);
   fprintf(ofst, "Common perimeter = %lf\n", ContainerPerimeter(&c));
 
-  fprintf(ofst, "Multimethod out.\n");
-  ContainerMultimethodOut(&c, ofst);
+  // fprintf(ofst, "Multimethod out.\n");
+  // ContainerMultimethodOut(&c, ofst);
 
   // Тестовый фрагмент для вычисления скорости вычисления мультиметода,
   // осуществляющего внутри нахождение суммы периметров двух фигур после
   // их идентификации в мультиметоде (вместо вывода).
   double p = 0.0;
   clock_t startTime = clock();
-  for(int i = 0; i < 10000000; ++i) {
+  for(int i = 0; i < 5000000; ++i) {
     p = ContainerMultimethodPerimeter(&c);
   }
   clock_t endTime = clock();
-  printf("p = %lf\n", p);
+  printf("p = %le\n", p);
 
   ContainerClear(&c);
 

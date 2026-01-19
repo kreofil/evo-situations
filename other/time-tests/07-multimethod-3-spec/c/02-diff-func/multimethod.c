@@ -66,13 +66,13 @@ void Multimethod(Figure* f1, Figure* f2, FILE* ofst) {
     case RECTANGLE:
       switch(f2->k) {
         case RECTANGLE:
-          MMRR((Rectangle*)f1, (Rectangle*)f2, ofst);
+          MMRR(&(f1->r), &(f2->r), ofst);
           break;
         case TRIANGLE:
-          MMRT((Rectangle*)f1, (Triangle*)f2, ofst);
+          MMRT(&(f1->r), &(f2->t), ofst);
           break;
         case CIRCLE:
-          MMRC((Rectangle*)f1, (Circle*)f2, ofst);
+          MMRC(&(f1->r), &(f2->c), ofst);
           break;
         default:
           fprintf(ofst, "1st is RECTANGLE. Incorrect key of figure 2 = %d\n", f2->k);
@@ -81,13 +81,13 @@ void Multimethod(Figure* f1, Figure* f2, FILE* ofst) {
     case TRIANGLE:
       switch(f2->k) {
         case RECTANGLE:
-          MMTR((Triangle*)f1, (Rectangle*)f2, ofst);
+          MMTR(&(f1->t), &(f2->r), ofst);
           break;
         case TRIANGLE:
-          MMTT((Triangle*)f1, (Triangle*)f2, ofst);
+          MMTT(&(f1->t), &(f2->t), ofst);
           break;
         case CIRCLE:
-          MMTC((Triangle*)f1, (Circle*)f2, ofst);
+          MMTC(&(f1->t), &(f2->c), ofst);
           break;
         default:
           fprintf(ofst, "1st is TRIANGLE. Incorrect key of figure 2 = %d\n", f2->k);
@@ -96,13 +96,13 @@ void Multimethod(Figure* f1, Figure* f2, FILE* ofst) {
     case CIRCLE:
       switch(f2->k) {
         case RECTANGLE:
-          MMCR((Circle*)f1, (Rectangle*)f2, ofst);
+          MMCR(&(f1->c), &(f2->r), ofst);
           break;
         case TRIANGLE:
-          MMCT((Circle*)f1, (Triangle*)f2, ofst);
+          MMCT(&(f1->c), &(f2->t), ofst);
           break;
         case CIRCLE:
-          MMCC((Circle*)f1, (Circle*)f2, ofst);
+          MMCC(&(f1->c), &(f2->c), ofst);
           break;
         default:
           fprintf(ofst, "1st is CIRCLE. Incorrect key of figure 2 = %d\n", f2->k);

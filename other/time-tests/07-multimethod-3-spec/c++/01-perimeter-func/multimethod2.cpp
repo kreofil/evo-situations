@@ -48,13 +48,13 @@ void Circle::FirstCircle(Circle& circ, std::ofstream &ofst) {
 //------------------------------------------------------------------------------
 // Обработчик круга и прямоугольника
 double Rectangle::FirstCirclePerimeter(Circle& circ) {
-  return circ.Perimeter() * Perimeter();
+  return (circ.Perimeter() + Perimeter()) / 5.0;
 }
 
 //------------------------------------------------------------------------------
 // Обработчик круга и треугольника
 double Triangle::FirstCirclePerimeter(Circle& circ) {
-  return circ.Perimeter() * Perimeter();
+  return circ.Perimeter() - Perimeter() * 7.0;
 }
 
 //------------------------------------------------------------------------------
@@ -65,15 +65,15 @@ double Circle::MultimethodPerimeter(Figure& fig2) {
 
 // Обработчик прямоугольника и круга
 double Circle::FirstRectanglePerimeter(Rectangle& rect) {
-  return rect.Perimeter() * Perimeter();
+  return (rect.Perimeter() - Perimeter()) * 10.0;
 }
 
 // Обработчик треугольника и круга
 double Circle::FirstTrianglePerimeter(Triangle& trian) {
-  return trian.Perimeter() * Perimeter();
+  return trian.Perimeter() * Perimeter() / 3.0;
 }
 
 // Обработчик двух кругов
 double Circle::FirstCirclePerimeter(Circle& circ) {
-  return circ.Perimeter() * Perimeter();
+  return circ.Perimeter() * Perimeter() / 13.0;
 }

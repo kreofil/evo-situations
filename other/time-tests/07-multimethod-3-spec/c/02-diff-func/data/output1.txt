@@ -38,4 +38,4 @@ Perimeters of figures:
 Common perimeter = 6469.203492
 Empty container.
 Container contains 0 elements.
-Delta time = 4.736533
+Delta time = 5.489277

@@ -56,12 +56,13 @@ int main(int argc, char* argv[]) {
   // Тестовый фрагмент для вычисления скорости вычисления мультиметода,
   // осуществляющего внутри нахождение суммы периметров двух фигур после
   // их идентификации в мультиметоде (вместо вывода).
-  // Хочется сравнить с Питоном
+  double p = 0.0;
   clock_t startTime = clock();
-  for(int i = 0; i < 3000000; ++i) {
-    ContainerMultimethodPerimeter(&c);
+  for(int i = 0; i < 5000000; ++i) {
+    p = ContainerMultimethodPerimeter(&c);
   }
   clock_t endTime = clock();
+  printf("p = %le\n", p);
 
   ContainerClear(&c);
   fprintf(ofst, "Empty container.\n");

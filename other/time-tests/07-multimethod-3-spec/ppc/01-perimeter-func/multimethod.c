@@ -57,18 +57,18 @@ double MultimethodPerimeter<Figure.rect* r1, Figure.rect* r2>() {
 //------------------------------------------------------------------------------
 // Обработчик специализации для прямоугольника и треугольника
 double MultimethodPerimeter<Figure.rect* r1, Figure.trian* t2>() {
-  return RectanglePerimeter(&(r1->@)) * TrianglePerimeter(&(t2->@));
+  return RectanglePerimeter(&(r1->@)) + TrianglePerimeter(&(t2->@));
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для треугольника и прямоугольника
 double MultimethodPerimeter<Figure.trian* t1, Figure.rect* r2>() {
-  return TrianglePerimeter(&(t1->@)) * RectanglePerimeter(&(r2->@));
+  return TrianglePerimeter(&(t1->@)) / RectanglePerimeter(&(r2->@));
 }
 
 //------------------------------------------------------------------------------
 // Обработчик специализации для двух треугольников
 double MultimethodPerimeter<Figure.trian* t1, Figure.trian* t2>() {
-  return TrianglePerimeter(&(t1->@)) * TrianglePerimeter(&(t2->@));
+  return TrianglePerimeter(&(t1->@)) * TrianglePerimeter(&(t2->@)) * 2.0;
 }
 

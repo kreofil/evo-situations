@@ -23,19 +23,20 @@ int main(int argc, char* argv[]) {
   c.Out(ofst);
   c.PerimeterOut(ofst);
   ofst << "Common perimeter = " << c.Perimeter() << "\n";
+  std::cout << "Common perimeter = " << c.Perimeter() << "\n";
 
-  ofst << "Multimethod out.\n";
-  c.MultimethodOut(ofst);
+  // ofst << "Multimethod out.\n";
+  // c.MultimethodOut(ofst);
 
   // Тестовый фрагмент для вычисления скорости вычисления периметра.
   double p = 0.0;
   clock_t startTime = clock();
-  for(int i = 0; i < 10000000; ++i) {
-    c.MultimethodPerimeter();
+  for(int i = 0; i < 5000000; ++i) {
+    p = c.MultimethodPerimeter();
   }
   clock_t endTime = clock();
-
   std::cout << "p = " << p << "\n";
+
   c.Clear();
   ofst << "Empty container.\n";
   c.Out(ofst);
