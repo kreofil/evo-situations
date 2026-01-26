@@ -88,7 +88,7 @@ SimpleFigure* FigureClone<SimpleFigure.SimpleRectangle *f>() {
   // memcpy(r, f, sizeof(SimpleFigure<SimpleRectangle>));
   r->@x = f->@x;
   r->@y = f->@y;
-  return r;
+  return (SimpleFigure*)r;
 }
 
 //------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ SimpleFigure* FigureClone<SimpleFigure.SimpleTriangle *f>() {
   t->@a = f->@a;
   t->@b = f->@b;
   t->@c = f->@c;
-  return t;
+  return (SimpleFigure*)t;
 
 }
 
@@ -115,5 +115,5 @@ SimpleFigure* FigureClone<SimpleFigure.FigureContainer *f>() {
   for(int i = 0; i < own_container->len; i++) {
     clone_container->cont[i] = FigureClone<own_container->cont[i]>();
   }
-  return clone;
+  return (SimpleFigure*)clone;
 }

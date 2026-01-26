@@ -8,6 +8,8 @@
 #include "builder.h"
 #include "figure-container.h"
 
+void AppliqueCollector(FILE* ofst, Builder* builder);
+
 //------------------------------------------------------------------------------
 int main() {
   // В демонстрационном примере данные для формирования семейств фигур
@@ -27,12 +29,12 @@ int main() {
 
   printf("Start\n");
 
-  AppliqueCollector(ofst, &simpleBuilder);
-  ResultOut<&simpleBuilder>(ofst);
+  AppliqueCollector(ofst, (Builder*)&simpleBuilder);
+  ResultOut<(Builder*)&simpleBuilder>(ofst);
   FigureContainerClear(&container);
 
-  AppliqueCollector(ofst, &counterBuilder);
-  ResultOut<&counterBuilder>(ofst);
+  AppliqueCollector(ofst, (Builder*)&counterBuilder);
+  ResultOut<(Builder*)&counterBuilder>(ofst);
 
   printf("Stop\n");
   return 0;

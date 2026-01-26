@@ -4,6 +4,7 @@
 //==============================================================================
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "simple-figure.h"
 
 //------------------------------------------------------------------------------
@@ -20,33 +21,33 @@ int main(int argc, char* argv[]) {
   struct SimpleFigure.FigureContainer container;
   FigureContainerInit(&(container.@));
 
-  FigureIn<&container>(ifst);
+  FigureIn<(SimpleFigure*)&container>(ifst);
   fclose(ifst);
 
   fprintf(stdout, "Filled Parent container.\n");
-  FigureOut<&container>(stdout);
+  FigureOut<(SimpleFigure*)&container>(stdout);
 
   fprintf(ofst, "Filled Parent container.\n");
-  FigureOut<&container>(ofst);
+  FigureOut<(SimpleFigure*)&container>(ofst);
 
   //========
 
   struct SimpleFigure.FigureContainer *pc;
-  pc = FigureClone<&container>();
+  pc = (struct SimpleFigure.FigureContainer*)FigureClone<(SimpleFigure*)&container>();
 
   fprintf(stdout, "Filled Cloned container.\n");
-  FigureOut<&container>(stdout);
+  FigureOut<(SimpleFigure*)&container>(stdout);
 
   fprintf(ofst, "Filled Cloned container.\n");
-  FigureOut<&container>(ofst);
+  FigureOut<(SimpleFigure*)&container>(ofst);
 
   FigureContainerClear(&(container.@));
   fprintf(ofst, "Empty Parent container.\n");
-  FigureOut<&container>(ofst);
+  FigureOut<(SimpleFigure*)&container>(ofst);
 
   FigureContainerClear(&(pc->@));
   fprintf(ofst, "Empty Cloned container.\n");
-  FigureOut<&container>(ofst);
+  FigureOut<(SimpleFigure*)&container>(ofst);
 
   fclose(ofst);
   free(pc);

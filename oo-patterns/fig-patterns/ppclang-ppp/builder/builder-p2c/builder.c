@@ -7,7 +7,7 @@
 
 //------------------------------------------------------------------------------
 // Прототипы используемых функций
-void FigureContainerAppend(FigureContainer* c, Figure * figure);
+void FigureContainerAppend(FigureContainer* c, Figure* figure);
 
 //------------------------------------------------------------------------------
 // Обобщающий Строитель прямоугольников.
@@ -37,7 +37,7 @@ void BuildRectangle<Builder.SimpleBuilder *f>(double x, double y) {
                                   create_spec(Figure.SimpleRectangle);
   rectangle->@.x = x;
   rectangle->@.y = y;
-  FigureContainerAppend(f->@container, rectangle);
+  FigureContainerAppend(f->@container, (Figure*)rectangle);
 }
 
 
@@ -49,7 +49,7 @@ void BuildTriangle<Builder.SimpleBuilder *f>(double a, double b, double c) {
   triangle->@.a = a;
   triangle->@.b = b;
   triangle->@.c = c;
-  FigureContainerAppend(f->@container, triangle);
+  FigureContainerAppend(f->@container, (Figure*)triangle);
 }
 
 //------------------------------------------------------------------------------
