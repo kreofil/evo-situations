@@ -12,4 +12,3 @@ typedef struct Triangle {
 } Triangle;
 
 #endif // __triangle__
-

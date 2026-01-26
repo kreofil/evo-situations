@@ -8,5 +8,4 @@
 
 //------------------------------------------------------------------------------
 // Обобщающая функция для ввода параметров фигуры
-// void FigureIn<Figure *f>(FILE* file) {}//= 0;
-void FigureIn<struct Figure *f>(FILE* file) {}//= 0;
+void FigureIn<Figure *f>(FILE* file) {} //= 0;

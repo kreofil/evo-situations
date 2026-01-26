@@ -5,7 +5,6 @@
 //==============================================================================
 
 #include <stdio.h>
-// #include "figure.h"
 #include "figure-rectangle.h"
 #include "figure-triangle.h"
 #include "figure-circle.h"

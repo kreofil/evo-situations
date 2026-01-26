@@ -1,5 +1,5 @@
 //==============================================================================
-// figures-input.c - функция содания ввода всех альтернативных фигур.
+// figures-input.c - функция создания ввода всех альтернативных фигур.
 // Реализована как централизованная. Единственная, требующая модификации
 // при вводе данных. Но можно тоже сделать эволюционно расширяемой.
 //==============================================================================
@@ -22,14 +22,12 @@ void FigureCreateAndIn(Figure* f, FILE* ifst) {
   fscanf(ifst, "%d", &(k));
   switch(k) {
   case 1:
-    // sp = create_spec(Figure.rect);
     pr = malloc(sizeof(Rectangle));
     struct Figure.rect* pfr = (struct Figure.rect*)f;
     init_spec(Figure.rect, pfr);
     pfr->@ = pr;
     break;
   case 2:
-    // sp = create_spec(Figure.trian);
     pt = malloc(sizeof(Triangle));
     struct Figure.trian* pft = (struct Figure.trian*)f;
     init_spec(Figure.trian, pft);

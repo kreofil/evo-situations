@@ -16,7 +16,7 @@ void FigureOut<Figure.decor * d>(FILE* ofst)
 {
     // В начале выводится содержимое фигуры
     // FigureOut<&(d->@.@)>(ofst);
-    struct Decorator.Figure* dfp = &d->@;
+    struct Decorator.Figure* dfp = (struct Decorator.Figure*)&d->@;
     FigureOut<&(dfp->@)>(ofst);
     // Затем содержимое декоратора
     fprintf(ofst, "    Color is %#0.6X\n", d->@color);

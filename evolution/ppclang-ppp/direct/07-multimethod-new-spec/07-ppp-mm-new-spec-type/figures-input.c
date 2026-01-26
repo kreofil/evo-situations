@@ -9,8 +9,7 @@
 #include "figure-triangle.h"
 #include "figure-circle.h"
 
-// void FigureIn<Figure *f>(FILE* file);
-void FigureIn<struct Figure *f>(FILE* file);
+void FigureIn<Figure *f>(FILE* file);
 
 //------------------------------------------------------------------------------
 // Ввод параметров одной из фигур из файла
@@ -22,13 +21,13 @@ Figure* FigureCreateAndIn(FILE* ifst) {
   fscanf(ifst, "%d", &(k));
   switch(k) {
   case 1:
-    sp = create_spec(Figure.Rectangle); // Создание и инициализация
+    sp = create_spec(Figure.Rectangle);
     break;
   case 2:
-    sp = create_spec(Figure.Triangle); // Создание и инициализация
+    sp = create_spec(Figure.Triangle);
     break;
   case 3:
-    sp = create_spec(Figure.Circle); // Создание и инициализация
+    sp = create_spec(Figure.Circle);
     break;
   default:
     return 0;

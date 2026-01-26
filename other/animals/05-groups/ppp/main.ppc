@@ -25,98 +25,98 @@ int main(int argc, char* argv[]) {
   struct AnyAnimal.penguin  ap;   ap.@ = &p;
   struct AnyAnimal.worm     aw;   aw.@ = &w;
 
-  Moving<&ae>();
-  Moving<&ad>();
-  Moving<&ap>();
-  Moving<&aw>();
+  Moving<(AnyAnimal*)&ae>();
+  Moving<(AnyAnimal*)&ad>();
+  Moving<(AnyAnimal*)&ap>();
+  Moving<(AnyAnimal*)&aw>();
 
   printf("--- Использование специализаций через обобщенный указатель ---\n");
   AnyAnimal* any;
-  any =  &ae;
+  any =  (AnyAnimal*)&ae;
   Moving<any>();
-  any =  &ad;
+  any =  (AnyAnimal*)&ad;
   Moving<any>();
-  any =  &ap;
+  any =  (AnyAnimal*)&ap;
   Moving<any>();
-  any =  &aw;
+  any =  (AnyAnimal*)&aw;
   Moving<any>();
 
   printf("\n==== Использование группы пловцов ====\n");
   printf("--- Прямое использование специализаций ---\n");
   struct SwimmingAnimal.penguin  sp;   sp.@ = &p;
-  Swimming<&sp>();
+  Swimming<(SwimmingAnimal*)&sp>();
   struct SwimmingAnimal.dog  sd;   sd.@ = &d;
-  Swimming<&sd>();
+  Swimming<(SwimmingAnimal*)&sd>();
 
   printf("--- Использование специализаций через обобщенный указатель ---\n");
   SwimmingAnimal* swimmer;
-  swimmer =  &sp;
+  swimmer =  (SwimmingAnimal*)&sp;
   Swimming<swimmer>();
-  swimmer =  &sd;
+  swimmer =  (SwimmingAnimal*)&sd;
   Swimming<swimmer>();
 
   printf("\n==== Использование группы говорунов ====\n");
   printf("--- Прямое использование специализаций ---\n");
   struct SpeakingAnimal.elephant  spe;   spe.@ = &e;
-  Speaking<&spe>();
+  Speaking<(SpeakingAnimal*)&spe>();
   struct SpeakingAnimal.dog  spd;   spd.@ = &d;
-  Speaking<&spd>();
+  Speaking<(SpeakingAnimal*)&spd>();
   struct SpeakingAnimal.penguin  spp;   spp.@ = &p;
-  Speaking<&spp>();
+  Speaking<(SpeakingAnimal*)&spp>();
 
   printf("--- Использование специализаций через обобщенный указатель ---\n");
   SpeakingAnimal* speaker;
-  speaker =  &spe;
+  speaker =  (SpeakingAnimal*)&spe;
   Speaking<speaker>();
-  speaker =  &spd;
+  speaker =  (SpeakingAnimal*)&spd;
   Speaking<speaker>();
-  speaker =  &spp;
+  speaker =  (SpeakingAnimal*)&spp;
   Speaking<speaker>();
 
   printf("\n==== Использование группы ныряльщиков ====\n");
   printf("--- Прямое использование специализаций ---\n");
   struct DivingAnimal.penguin  dp;   dp.@ = &p;
-  Diving<&dp>();
+  Diving<(DivingAnimal*)&dp>();
 
   printf("--- Использование специализаций через обобщенный указатель ---\n");
   DivingAnimal* diver;
-  diver =  &dp;
+  diver =  (DivingAnimal*)&dp;
   Diving<diver>();
 
   printf("\n==== Использование общей группы животных. Питание ====\n");
 
   printf("--- Прямое использование специализаций ---\n");
-  Eating<&ae>();
-  Eating<&ad>();
-  Eating<&ap>();
-  Eating<&aw>();
+  Eating<(AnyAnimal*)&ae>();
+  Eating<(AnyAnimal*)&ad>();
+  Eating<(AnyAnimal*)&ap>();
+  Eating<(AnyAnimal*)&aw>();
 
   printf("--- Использование специализаций через обобщенный указатель ---\n");
-  any =  &ae;
+  any =  (AnyAnimal*)&ae;
   Eating<any>();
-  any =  &ad;
+  any =  (AnyAnimal*)&ad;
   Eating<any>();
-  any =  &ap;
+  any =  (AnyAnimal*)&ap;
   Eating<any>();
-  any =  &aw;
+  any =  (AnyAnimal*)&aw;
   Eating<any>();
 
   printf("\n==== Определение принадлежности животных к конкретной группе ====\n");
 
   printf("--- Прямое использование специализаций ---\n");
-  Group<&ae>();
-  Group<&ad>();
-  Group<&ap>();
-  Group<&aw>();
+  Group<(AnyAnimal*)&ae>();
+  Group<(AnyAnimal*)&ad>();
+  Group<(AnyAnimal*)&ap>();
+  Group<(AnyAnimal*)&aw>();
 
   printf("--- Использование специализаций через обобщенный указатель ---\n");
-  any =  &ae;
+  any =  (AnyAnimal*)&ae;
   Group<any>();
-  any =  &ad;
+  any =  (AnyAnimal*)&ad;
   Group<any>();
-  any =  &ap;
+  any =  (AnyAnimal*)&ap;
   Group<any>();
-  any =  &aw;
+  any =  (AnyAnimal*)&aw;
   Group<any>();
 
 

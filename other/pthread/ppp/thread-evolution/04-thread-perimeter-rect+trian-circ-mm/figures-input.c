@@ -22,8 +22,8 @@ Figure* FigureCreateAndIn(FILE* ifst) {
   int k = 0;
   fscanf(ifst, "%d", &(k));
   for(int i = 1; i <= figSpecSize; i++) {
-    Figure* pFig = get_spec_ptr(EnumFig, i);
-    sp = FigureCreateUseTag<pFig>(k);
+    EnumFig* pEnumFig = get_spec_ptr(EnumFig, i);
+    sp = FigureCreateUseTag<pEnumFig>(k);
     if(sp != NULL) break;
   }
   if(sp == NULL) {

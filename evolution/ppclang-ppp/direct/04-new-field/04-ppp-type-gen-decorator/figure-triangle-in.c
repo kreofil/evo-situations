@@ -12,7 +12,6 @@
 void TriangleIn(Triangle *t, FILE* ifst);
 // Прототип обобщеннай функции ввода фигуры
 void FigureIn<Figure *f>(FILE* file);
-// void FigureIn<struct Figure *f>(FILE* file);
 
 //------------------------------------------------------------------------------
 // Ввод треугольника как фигуры

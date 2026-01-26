@@ -14,7 +14,7 @@ void TriangleOut(Triangle *t, FILE* ofst);
 void FigureOut<Figure *f>(FILE* ofst);
 
 //------------------------------------------------------------------------------
-// Ввод треугольника как фигуры
+// Вывод треугольника как фигуры
 void FigureOut<Figure.Triangle *f>(FILE* ofst) {
   TriangleOut(&(f->@), ofst);
 }

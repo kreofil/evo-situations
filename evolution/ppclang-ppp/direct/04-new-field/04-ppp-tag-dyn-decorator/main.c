@@ -45,7 +45,6 @@ int main(int argc, char* argv[]) {
 
   fprintf(ofst, "Empty container.\n");
   ContainerOut(&c, ofst);
-
   fclose(ofst);
 
   printf("Stop\n");

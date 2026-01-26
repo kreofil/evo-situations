@@ -12,11 +12,4 @@
 // структура, обобщающая фигуры
 typedef struct Figure {} <> Figure;
 
-// Основа специализации для формирования фиктивной заглушки
-typedef struct Empty{} Empty;
-// Специализация для формирования фиктивной заглушки
-// Figure + <empty: Empty*;>;
-Figure + <empty: void*;>;
-// Figure + <empty: int*;>;
-
 #endif // __figure__

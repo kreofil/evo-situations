@@ -14,7 +14,7 @@ void RectangleOut(Rectangle *r, FILE* ifst);
 void FigureOut<Figure *f>(FILE* ofst);
 
 //------------------------------------------------------------------------------
-// Ввод прямоугольника как фигуры
+// Вывод прямоугольника как фигуры
 void FigureOut<Figure.Rectangle *f>(FILE* ofst) {
   RectangleOut(&(f->@), ofst);
 }

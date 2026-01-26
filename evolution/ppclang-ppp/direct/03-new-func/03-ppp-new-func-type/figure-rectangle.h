@@ -10,7 +10,6 @@
 
 //------------------------------------------------------------------------------
 // Фигура - прямоугольник
-// Figure + < Rectangle; >;
-struct Figure + < struct Rectangle; >;
+Figure + < Rectangle; >;
 
 #endif // __figure_rectangle__

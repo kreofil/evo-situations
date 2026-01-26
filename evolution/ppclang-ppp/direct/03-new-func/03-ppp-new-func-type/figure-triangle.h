@@ -10,7 +10,6 @@
 
 //------------------------------------------------------------------------------
 // Фигура - треугольник
-// Figure + < Triangle; >;
-struct Figure + < struct Triangle; >;
+Figure + < Triangle; >;
 
 #endif // __figure_triangle__

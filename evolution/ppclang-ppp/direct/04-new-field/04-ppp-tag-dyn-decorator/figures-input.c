@@ -32,6 +32,6 @@ Figure* FigureCreateAndIn(FILE* ifst)
     // Создание декоратора
     struct Figure.decor *sd = create_spec(Figure.decor);
     sd->@f = sp; // связывание с фигурой
-    FigureIn<sd>(ifst); // ввод декорированной фигуры
-    return sd;
+    FigureIn<(Figure*)sd>(ifst); // ввод декорированной фигуры
+    return (Figure*)sd;
 }

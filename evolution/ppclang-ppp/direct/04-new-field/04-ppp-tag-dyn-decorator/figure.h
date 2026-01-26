@@ -5,11 +5,11 @@
 // figure.h - содержит описание обобщающей геометрической фигуры,
 //==============================================================================
 
-#include "rectangle.h"
-#include "triangle.h"
+// #include "rectangle.h"
+// #include "triangle.h"
 
 //------------------------------------------------------------------------------
 // структура, обобщающая фигуры
-typedef struct Figure {} < : > Figure;
+typedef struct Figure {} <> Figure;
 
 #endif // __figure__

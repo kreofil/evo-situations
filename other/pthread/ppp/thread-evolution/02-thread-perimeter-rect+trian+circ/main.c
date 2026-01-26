@@ -15,6 +15,7 @@ void ContainerClear(Container* c);
 
 void ContainerIn(Container* c, FILE* ifst) ;
 void ContainerOut(Container* c, FILE* ofst) ;
+void ContainerPerimeterOut(Container *c, FILE* ofst);
 
 // Многопоточное вычисление периметров фигур, расположенных в контейнере
 double CalcFigurePerimetersInContainer(Container *c);

@@ -5,14 +5,13 @@
 //==============================================================================
 
 #include <stdio.h>
-// #include "figure.h"
 #include "figure-rectangle.h"
 #include "figure-triangle.h"
 
 void FigureIn<Figure *f>(FILE* file);
 
 //------------------------------------------------------------------------------
-// Ввод параметров одноф из фигур из файла
+// Ввод параметров одной из фигур из файла
 Figure* FigureCreateAndIn(FILE* ifst) {
   Figure *sp;
   int k = 0;

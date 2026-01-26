@@ -9,8 +9,7 @@
 #include "figure-triangle.h"
 #include "figure-circle.h"
 
-// void FigureIn<Figure *f>(FILE* file);
-void FigureIn<struct Figure *f>(FILE* file);
+void FigureIn<Figure *f>(FILE* file);
 
 //------------------------------------------------------------------------------
 // Ввод параметров одной из фигур из файла

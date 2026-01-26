@@ -20,6 +20,7 @@
 #define NB_ENABLE 1
 
 #define Sleep(x) usleep(x*1000)
+unsigned int usleep (unsigned int __seconds);
 
 int kbhit() {
   struct timeval tv;

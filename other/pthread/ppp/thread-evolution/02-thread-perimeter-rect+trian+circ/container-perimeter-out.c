@@ -24,13 +24,8 @@ typedef struct FigurePerimeterData {
 // Специализация для потока, вычисляющего периметр фигуры
 struct ThreadData + <FigurePerimeterData;>;
 
-// Прототип обработчика специализации, запускаемого в потоке.
-// Вычисляет периметр прямоугольника.
-// void RunThread<ThreadData.FigurePerimeterData *figurePerimeter>();
-
 //------------------------------------------------------------------------------
 // Реализация обработчика специализации, запускаемого в потоке.
-// Вычисляет периметр прямоугольника.
 void RunThread<ThreadData.FigurePerimeterData *figurePerimeter>() {
   printf("The thread %d started\n", figurePerimeter->@iThread);
   figurePerimeter->@p = FigurePerimeter<figurePerimeter->@f>();
@@ -38,13 +33,12 @@ void RunThread<ThreadData.FigurePerimeterData *figurePerimeter>() {
          figurePerimeter->@iThread, figurePerimeter->@p);
 }
 
-
 //------------------------------------------------------------------------------
 // Многопоточное вычисление периметров фигур, расположенных в контейнере
 double CalcFigurePerimetersInContainer(Container *c) {
   struct ThreadData.FigurePerimeterData perimeterArray[c->len];
   struct ThreadData.FigurePerimeterData *pElement;
-  // Запуск потоков, осуществлеющих вычисление периметров для фигур
+  // Запуск потоков, осуществляющих вычисление периметров для фигур
   for(int i = 0; i < c->len; ++i) {
     init_spec(ThreadData.FigurePerimeterData, (perimeterArray+i));
     pElement = (perimeterArray+i);

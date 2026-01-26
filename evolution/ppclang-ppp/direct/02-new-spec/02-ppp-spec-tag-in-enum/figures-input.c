@@ -7,8 +7,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "figure.h"
-// #include "figure-rectangle.h"
-// #include "figure-triangle.h"
 
 void FigureIn<Figure *f>(FILE* file);
 Figure* FigureCreateUseTag<EnumFig *pEnumFig>(int k);
@@ -20,10 +18,10 @@ Figure* FigureCreateAndIn(FILE* ifst) {
   // printf("figSpecSize = %d\n", figSpecSize);
   Figure *sp;
   int k = 0;
-  fscanf(ifst, "%d", &(k));
+  fscanf(ifst, "%d", &k);
   for(int i = 1; i < figSpecSize; i++) {
-    Figure* pFig = get_spec_ptr(EnumFig, i);
-    sp = FigureCreateUseTag<pFig>(k);
+    EnumFig* pEnumFig = get_spec_ptr(EnumFig, i);
+    sp = FigureCreateUseTag<pEnumFig>(k);
     if(sp != NULL) break;
   }
   if(sp == NULL) {
