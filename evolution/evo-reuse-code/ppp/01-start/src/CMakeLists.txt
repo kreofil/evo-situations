@@ -1,9 +1,6 @@
 # set minimum cmake version
-cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.21 FATAL_ERROR)
 set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type is Debug" FORCE)
-
-set(BUILD_DIR "${CMAKE_BINARY_DIR}")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${BUILD_DIR}/../../../bin")
 
 # Установка переменной со списком исходников
 set(SOURCE_FILES
@@ -14,31 +11,23 @@ set(SOURCE_FILES
     triangle.h
     figure-triangle.h
     container.h
-    new-generalization.h
 
     #sources
     figure-in.c
     figures-input.c
     figure-out.c
-    figure-perimeter.c
     figure-rectangle-in.c
     figure-rectangle-out.c
-    figure-rectangle-perimeter.c
     figure-triangle-in.c
     figure-triangle-out.c
-    figure-triangle-perimeter.c
     rectangle-in.c
     rectangle-out.c
-    rectangle-perimeter.c
     triangle-in.c
     triangle-out.c
-    triangle-perimeter.c
     container-constr.c
     container-in.c
     container-out.c
-    container-perimeter-out.c
-    new-generalization.c
     main.c
 )
 
-add_executable(08-more-gen ${SOURCE_FILES})
+add_executable(01-start ${SOURCE_FILES})
