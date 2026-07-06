@@ -45,17 +45,21 @@ AbstractFactory + <ForToy: void;>;
 
 //------------------------------------------------------------------------------
 // Обобщающая функция, определяющая интерфейс для создания одну из уток.
-Duck* CreateDuck<AbstractFactory* f>() {return NULL;} //= 0;
+Duck* CreateDuck<AbstractFactory* f>() = 0;
+// Duck* CreateDuck<AbstractFactory* f>() {
+//   printf("You need to define spec function\n");
+//   exit(33);
+// }
 //Обработчик, обеспечивающий создание домашней утки.
 Duck* CreateDuck<AbstractFactory.ForDomestic* f>() {
-  struct Duck.DomesticDuck* d = create_spec(Duck.DomesticDuck);
+  Duck.DomesticDuck* d = create_spec(Duck.DomesticDuck);
   DuckMessage();
   DomesticDuckMessage();
   return (Duck*)d;
 }
 //Обработчик, обеспечивающий создание игрушечной утки.
 Duck* CreateDuck<AbstractFactory.ForToy* f>() {
-  struct Duck.ToyDuck* d = create_spec(Duck.ToyDuck);
+  Duck.ToyDuck* d = create_spec(Duck.ToyDuck);
   DuckMessage();
   ToyDuckMessage();
   return (Duck*)d;
@@ -63,17 +67,18 @@ Duck* CreateDuck<AbstractFactory.ForToy* f>() {
 
 //------------------------------------------------------------------------------
 // Обобщающая функция, определяющая интерфейс для создания одной из собак.
-Dog* CreateDog<AbstractFactory* f>() {return NULL;} //= 0;
+// Dog* CreateDog<AbstractFactory* f>() {return NULL;} //= 0;
+Dog* CreateDog<AbstractFactory* f>() = 0; //{exit(42);}
 //Обработчик, обеспечивающий создание домашней собаки.
 Dog* CreateDog<AbstractFactory.ForDomestic* f>() {
-  struct Dog.DomesticDog* d = create_spec(Dog.DomesticDog);
+  Dog.DomesticDog* d = create_spec(Dog.DomesticDog);
   DogMessage();
   DomesticDogMessage();
   return (Dog*)d;
 }
 //Обработчик, обеспечивающий создание игрушечной собаки.
 Dog* CreateDog<AbstractFactory.ForToy* f>() {
-  struct Dog.ToyDog* d = create_spec(Dog.ToyDog);
+  Dog.ToyDog* d = create_spec(Dog.ToyDog);
   DogMessage();
   ToyDogMessage();
   return (Dog*)d;
@@ -107,13 +112,13 @@ int main() {
 
   printf("\n");
   printf("Step 3: Testing client code with the first factory type:\n");
-  struct AbstractFactory.ForDomestic f3;
+  AbstractFactory.ForDomestic f3;
   ClientCode((AbstractFactory*)&f3);
 
   printf("\n");
   printf
       ("Step 4: Testing the same client code with the second factory type:\n");
-  struct AbstractFactory.ForToy f4;
+  AbstractFactory.ForToy f4;
   ClientCode((AbstractFactory*)&f4);
 
   return 0;
