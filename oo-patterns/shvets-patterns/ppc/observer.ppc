@@ -80,7 +80,7 @@ int ListSize(List* list) {
   return count;
 }
 
-// Поиск наблюдателя в списке по его числовому идентификатору с последующим
+// Поиск наблюдателя в списке по совпадению указателей
 // удалением элемента списка без удаления наблюдателя
 void ListRemove(List* list, Observer* observer) {
   ListElement* e = list->first;
